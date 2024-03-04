@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="luaranTambahanDidanai.ascx.cs" Inherits="simlitekkes.UserControls.OperatorPenelitianPusdik.luaranTambahanDidanai" %>
+Menu Luaran Tambahan Didanai

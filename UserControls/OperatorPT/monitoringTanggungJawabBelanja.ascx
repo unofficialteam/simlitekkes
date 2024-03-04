@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="monitoringTanggungJawabBelanja.ascx.cs" Inherits="simlitekkes.UserControls.OperatorPT.monitoringTanggungJawabBelanja" %>
+Menu Monitoring Tanggung Jawab Belanja

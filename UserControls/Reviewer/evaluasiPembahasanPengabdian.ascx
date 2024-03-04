@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="evaluasiPembahasanPengabdian.ascx.cs" Inherits="simlitekkes.UserControls.Reviewer.evaluasiPembahasanPengabdian" %>
+Menu Evaluasi Pembahasan Pengabdian

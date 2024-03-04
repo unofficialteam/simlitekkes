@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterIFrame.master.cs" Inherits="simlitekkes.Helper.MasterIFrame" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aplikasi Simlitekkes - Aplikasi Sistem Manajemen Penelitian Politeknik Kesehatan">
+    <meta name="keywords" content="Simlitekkes, Penelitian, Poiteknik Kesehatan, Kementerian Kesehatan">
+    <meta name="author" content="TIM TI - Kemenkes">
+    <title>SIMLITEKKES - Main</title>
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../assets/plugins/fontawesome/css/all.min.css" rel="stylesheet">
+    <!--Start Your Custom Style Now-->
+    <link href="../assets/dist/css/style.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!--Global script(used by all pages)-->
+            <script src="../assets/plugins/jQuery/jquery-3.4.1.min.js"></script>
+            <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="../assets/dist/js/popper.min.js"></script>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

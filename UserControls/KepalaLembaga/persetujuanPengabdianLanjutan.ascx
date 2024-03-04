@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="persetujuanPengabdianLanjutan.ascx.cs" Inherits="simlitekkes.UserControls.KepalaLembaga.persetujuanPengabdianLanjutan" %>
+Menu Persetujuan Pengabdian Lanjutan

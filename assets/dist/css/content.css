@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.btn-link-gridview {
+    color: #fff;
+    background-color: #24b1b1;
+    border-color: #24b1b1;
+    box-shadow: none;
+}
+
+    .btn-link-gridview:hover {
+        color: #fff;
+        font-weight: bold;
+        background-color: #128686;
+        border-color: #128686;
+        box-shadow: 0 2px 6px rgb(128 128 128);
+    }
+
+.colorTrash {
+    color: #a21414;
+}
+
+    .colorTrash:hover {
+        color: #d81515;
+    }
+
+.color-nodata-gridview {
+    color: #a21414;
+}

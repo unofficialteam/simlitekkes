@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="sinkronisasiPerguruanTinggi.ascx.cs" Inherits="simlitekkes.UserControls.Admin.sinkronisasiPerguruanTinggi" %>
+Menu Sinkronisasi Perguruan Tinggi

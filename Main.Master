@@ -1,0 +1,275 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="simlitekkes.Main" %>
+
+<!DOCTYPE html>
+
+<html lang="id">
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aplikasi Simlitabkes - Aplikasi Sistem Manajemen Penelitian dan Pengabdian Kepada Masyarakat Politeknik Kesehatan">
+    <meta name="keywords" content="Simlitabkes, Penelitian, Pengabdian Kepada Masyarakat, Politeknik Kesehatan, Kementerian Kesehatan">
+    <meta name="author" content="TIM TI - Pusdik SDM Kesehatan Kementerian Kesehatan">
+    <title>SIMLITABKES - Main</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/dist/img/favicon.png">
+
+    <!--Global Styles(used by all pages)-->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/toastr/toastr.css" rel="stylesheet">
+    <link href="assets/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assets/plugins/typicons/src/typicons.min.css" rel="stylesheet">
+    <link href="assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="assets/plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
+
+    <!--Third party Styles(used by this page)-->
+    <link href="assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!--Start Your Custom Style Now-->
+    <link href="assets/dist/css/style.css" rel="stylesheet">
+    <link href="assets/dist/css/custom.css" rel="stylesheet" />
+
+
+    <!--Global script(used by all pages)-->
+    <script src="assets/plugins/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/dist/js/popper.min.js"></script>
+    <script src="assets/plugins/metisMenu/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+
+    <!-- Third Party Scripts(used by this page)-->
+    <script src="assets/plugins/chartJs/Chart.min.js"></script>
+    <script src="assets/plugins/sparkline/sparkline.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!--Page Active Scripts(used by this page)-->
+    <script src="assets/plugins/toastr/toastr.min.js"></script>
+    <script src="assets/plugins/select2/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!--Page Scripts(used by all page)-->
+    <script src="assets/dist/js/sidebar.js"></script>
+    <script src="assets/plugins/autonumeric/autoNumeric.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="fixed">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+
+    <form id="form1" method="post" enctype="multipart/form-data" runat="server">
+        <div class="wrapper">
+
+            <asp:ScriptManager ID="smMain" runat="server"></asp:ScriptManager>
+            <!-- Sidebar  -->
+            <nav class="sidebar sidebar-bunker">
+                <div class="sidebar-header">
+                    <a href="Default.aspx" class="logo">
+                        <img src="assets/dist/img/logo-simlitabkes-main.png" alt="Sistem Informasi Manajemen Penelitian dan Pengabdian Kepada Masyarakat Politeknik Kesehatan" style="height: 50px;"></a>
+                </div>
+                <!--/.sidebar header-->
+                <div class="profile-element d-flex align-items-center flex-shrink-0" style="background-color: black;">
+                    <div class="avatar online">
+                        <img src="assets/dist/img/avatar-1.jpg" class="img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="profile-text">
+                        <h6 class="m-0 font-weight-bold">
+                            <asp:Label ID="lblNamaPengguna" runat="server" /></h6>
+                        <span>
+                            <asp:Label ID="lblNamaPeran" runat="server" /></span>
+                    </div>
+                </div>
+                <!--/.profile element-->
+                <div class="sidebar-body">
+                    <nav class="sidebar-nav">
+                        <asp:ContentPlaceHolder ID="cphMenu" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </nav>
+                </div>
+                <!-- sidebar-body -->
+            </nav>
+
+            <!-- Page Content  -->
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <nav class="navbar-custom-menu navbar navbar-expand-lg m-0">
+                        <div class="sidebar-toggle-icon" id="sidebarCollapse">
+                            sidebar toggle<span></span>
+                        </div>
+                        <!--/.sidebar toggle icon-->
+                        <div class="d-flex flex-grow-1">
+                            <ul class="navbar-nav flex-row align-items-center ml-auto">
+                                <li class="nav-item dropdown quick-actions">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                        <i class="typcn typcn-group-outline"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <h6 class="notification-title">Ganti Peran</h6>
+                                        <p class="notification-text">Pilih peran dibawah ini :</p>
+                                        <div class="fs-14">
+                                            <asp:RadioButtonList ID="rblPeran" runat="server" RepeatDirection="Vertical" CssClass="radio-button-list"
+                                                RepeatLayout="Flow" DataTextField="nama_peran" DataValueField="id_peran"
+                                                AutoPostBack="true" OnSelectedIndexChanged="rblPeran_SelectedIndexChanged">
+                                            </asp:RadioButtonList>
+                                        </div>
+                                        <asp:Panel ID="panelKetGantiPeran" runat="server" CssClass="dropdown-item fs-14">
+                                            <asp:Label ID="lblKetGantiPeran" runat="server" ForeColor="Red"></asp:Label>
+                                        </asp:Panel>
+                                    </div>
+                                </li>
+
+                                <!--/.dropdown-->
+                                <li class="nav-item dropdown user-menu">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                        <i class="typcn typcn-user-outline"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-header d-sm-none">
+                                            <a href="#" class="header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+                                        </div>
+                                        <div class="user-header">
+                                            <div class="img-user">
+                                                <img src="assets/dist/img/avatar-1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- user-header -->
+                                        <asp:LinkButton runat="server" ID="lbGantiPassword" CssClass="dropdown-item" OnClick="lbGantiPassword_Click"><i class="typcn typcn-key"></i>Ganti Password</asp:LinkButton>
+                                        <asp:LinkButton runat="server" ID="lbLogout" CssClass="dropdown-item" OnClick="lbLogout_Click"><i class="typcn typcn-arrow-right"></i>Sign Out</asp:LinkButton>
+                                    </div>
+                                    <!--/.dropdown-menu -->
+                                </li>
+                                <li class="nav-item dropdown quick-actions">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <asp:LinkButton ID="lbKonfirmasi" runat="server" aria-expanded="false"
+                                                CssClass="nav-link dropdown-toggle" OnClick="lbKonfirmasi_Click" Visible="false">                                        
+                                        <i class="typcn typcn-user-add-outline"></i>
+                                            </asp:LinkButton>
+                                        </div>
+                                        <div class="col-3">
+                                            <asp:Label ID="lblJmlKonfirmasiPersetujuan" runat="server" ForeColor="white" Text="0"
+                                                Visible="false" CssClass="badge badge-danger header-badge"></asp:Label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                                        <ProgressTemplate>
+                                            <div class="modal_loading">
+                                                <div class="spinner-grow text-success mb-3 " role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+                                            </div>
+                                        </ProgressTemplate>
+                                    </asp:UpdateProgress>
+                                </li>
+                            </ul>
+                            <!--/.navbar nav-->
+                            <div class="nav-clock">
+                                <div class="time">
+                                    <span class="time-hours"></span>
+                                    <span class="time-min"></span>
+                                    <span class="time-sec"></span>
+                                </div>
+                            </div>
+                            <!-- nav-clock -->
+                            <!--/.remove autofill input textbox-->
+                            <div>
+                                <input name="tbUsername" type="text" id="tbUsername" class="form-control" placeholder="..."
+                                    style="width: 1px; border: none;">
+                                <script type="text/javascript">
+                                    $('#tbUsername').hide('fast');
+                                </script>
+                            </div>
+                            <!--/.navbar nav-->
+                        </div>
+                    </nav>
+                    <!--/.navbar-->
+                    <!--/.Content Header (Page header)-->
+                    <div class="body-content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="modal modal-primary" id="modalGantiPassword" role="dialog" aria-labelledby="modalGantiPassword">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title font-weight-600" id="dangermodalGantiPassword">Ganti Password</h5>
+                                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-horizontal">
+                                        <div class="box-body">
+                                            <div class="form-group">
+                                                <label for="tbJudulArtikel" class="">Username</label>
+                                                <asp:Label ID="lblUsername" runat="server" CssClass="form-control" Text="-"></asp:Label>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tbJudulArtikel" class="">Password Lama</label>
+                                                <asp:TextBox runat="server" ID="tbPasswordLama" placeholder="Password Lama" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tbJudulArtikel" class="">Password Baru</label>
+                                                <asp:TextBox runat="server" ID="tbPasswordBaru" placeholder="Password Baru (Min. 6 Karakter)" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tbJudulArtikel" class="">Konfirmasi Password Baru</label>
+                                                <asp:TextBox runat="server" ID="tbKonfirmasiPasswordBaru" placeholder="Konfirmasi Password (Min. 6 Karakter)" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <asp:LinkButton ID="lbBatalGantiPassword" runat="server" CssClass="btn btn-info"
+                                        OnClick="lbBatalGantiPassword_Click" OnClientClick="$('#modalGantiPassword').modal('hide');">Batal</asp:LinkButton>
+                                    <asp:LinkButton ID="lbSimpanGantiPassword" runat="server" CssClass="btn btn-danger float-right"
+                                        OnClick="lbSimpanGantiPassword_Click" OnClientClick="$('#modalGantiPassword').modal('hide');">Simpan</asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.body content-->
+                </div>
+                <!--/.main content-->
+
+                <footer class="footer-content">
+                    <div class="footer-text d-flex align-items-center justify-content-between">
+                        <div class="copy">© 2020 Tim TI Kementerian Kesehatan</div>
+                        <div class="credit">SIMLITABKES</div>
+                    </div>
+                </footer>
+                <!--/.footer content-->
+
+                <div class="overlay"></div>
+            </div>
+            <!--/.wrapper-->
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $(".select2").select2();
+        })
+    </script>
+</body>
+</html>

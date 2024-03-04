@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="evaluasiSubstansiPenelitianLanjutan.ascx.cs" Inherits="simlitekkes.UserControls.Reviewer.evaluasiSubstansiPenelitianLanjutan" %>
+Menu Evaluasi Subtansi Penelitian Lanjutan

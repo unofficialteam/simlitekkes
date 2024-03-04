@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hasilPenilaianPembahasan.ascx.cs" Inherits="simlitekkes.UserControls.Reviewer.report.hasilPenilaianPembahasan" %>

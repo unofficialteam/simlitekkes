@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example of Bootstrap 3 Modals</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            (function ($) {
+                // Defining our jQuery plugin
+                $.fn.subscribe_modal_box = function (prop) {
+
+                    // Default parameters
+                    var options = $.extend({
+                        height: "400",
+                        width: "500",
+                        title: "JQuery Modal Box Demo",
+                        description: "Example of how to create a modal box.",
+                        top: "20%",
+                        left: "30%"
+                    }, prop);
+                    add_block_page();
+                    add_popup_box();
+                    add_styles();
+                    $('.bd-subscribe_modal_box').fadeIn();
+                    function add_styles() {
+                        $('.bd-subscribe_modal_box').css({
+                            'position': 'relative',
+                            'text-align': 'center',
+                            'box-shadow': '0px 2px 7px #292929',
+                            '-moz-box-shadow': '0px 2px 7px #292929',
+                            '-webkit-box-shadow': '0px 2px 7px #292929',
+                            'border-radius': '.3rem',
+                            'background': '#ffff',
+                            'z-index': '50',
+                            'font-family': 'Times New Roman',
+                            'overflow': 'hidden'
+                        });
+                        $('.bd-subscribe_modal_close').css({
+                            'position': 'absolute',
+                            'top': '0',
+                            'right': '0',
+                            'display': 'block',
+                            'height': '32px',
+                            'width': '32px',
+                            'line-height': '32px',
+                            'color': '#fff',
+                            'background': '#8a8a8a',
+                            'text-decoration': 'none',
+                            'z-index': '1'
+                        });
+                        /*Block page overlay*/
+                        $('.modal-dialog-box').css({
+                            'display': 'flex',
+                            'align-items': 'center',
+                        });
+                        $('.bd-subscribe_block_page').css({
+                            'position': 'fixed',
+                            'top': '0',
+                            'left': '0',
+                            'background-color': 'rgba(0,0,0,0.3)',
+                            'height': '100%',
+                            'width': '100%',
+                            'z-index': '1050',
+                            'overflow': 'hidden'
+                        });
+                        $('.bd-subscribe_inner_modal_box').css({
+                            'background-color': '#fff',
+                            'border-radius': '.3rem',
+                            '-moz-border-radius': '10px',
+                            '-webkit-border-radius': '10px'
+                        });
+                        $('.top-strip').css({
+                            'height': '100px',
+                            'background': '#007b5e',
+                            'transform': 'rotate(135deg)',
+                            'margin-top': '-90px',
+                            'margin-right': '274px',
+                            'margin-left': '-184px',
+                            'border-bottom': '50px solid #4CAF50',
+                            'border-top': '10px solid #4caf50'
+                        });
+                        $('.bd-title').css({
+                            'margin-top': '0px'
+                        });
+                        $('.bd-title span').css({
+                            'color': '#37a000'
+                        });
+                        $('.bd-des').css({
+                            'color': '#9a9a9a'
+                        });
+                        $('.bd-row').css({
+                            'display': 'flex',
+                            '-ms-flex-wrap': 'wrap',
+                            'flex-wrap': 'wrap',
+                            'margin-left': '-10px',
+                            'margin-right': '-10px'
+                        });
+                        $('.bd-col').css({
+                            'width': '50%',
+                            'padding-left': '10px',
+                            'padding-right': '10px'
+                        });
+                        $('.bd-form-control').css({
+                            'height': '45px',
+                            'border-radius': '.25rem',
+                            'padding': '.375rem .75rem',
+                            'width': '100%',
+                            'font-size': '14px',
+                            'border': '1px solid #d1d5da',
+                            'box-shadow': 'inset 0 1px 2px rgba(27,31,35,.075)',
+                            'color': '#24292e',
+                        });
+                        $('.bd-btn').css({
+                            'padding': '0.6875em 1.75em',
+                            'border-width': '5px',
+                            'font-weight': '600',
+                            'margin-top': '20px',
+                            'border': '1px solid transparent',
+                            'color': 'white',
+                            'font-size': '1rem',
+                            'border-radius': '0.25rem',
+                            'line-height': '1.5',
+                            ' border-radius': '.25rem !important',
+                            'transition': 'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out',
+                            'cursor': 'pointer',
+                            'background-color': '#37a000',
+                            'border-color': '#37a000',
+                            'display': 'block',
+                            'width': '100%'
+                        });
+                        function responsive(x) {
+                            if (x.matches) { // If media query matches
+                                $('.modal-dialog-box').css({
+                                    'max-width': '500px',
+                                    'margin': '1.75rem auto',
+                                    'min-height': 'calc(100% - 3.5rem)'
+                                });
+                                $('.bd-subscribe_inner_modal_box').css({
+                                    'padding': '3rem'
+                                });
+                            } else {
+                                $('.modal-dialog-box').css({
+                                    'max-width': '100%',
+                                    'margin': '.5rem',
+                                    'min-height': 'calc(100% - 1rem)'
+                                });
+                                $('.bd-subscribe_inner_modal_box').css({
+                                    'padding': '2rem'
+                                });
+                            }
+                        }
+                        var x = window.matchMedia("(min-width: 520px)");
+                        responsive(x); // Call listener function at run time
+                        x.addListener(responsive); // Attach listener function on state changes
+                    }
+                    function add_block_page() {
+                        var block_page = $('<div class="bd-subscribe_block_page"></div>');
+                        $(block_page).appendTo('body');
+                    }
+                    function add_popup_box() {
+                        var pop_up = $('<div class="modal-dialog-box"><div class="bd-subscribe_modal_box"><a href="#" class="bd-subscribe_modal_close">X</a><div class="bd-subscribe_inner_modal_box"><div class="top-strip"></div><h1 class="bd-title">Subscribe to the <span>bdtask</span> developer newslatter</h1><p class="bd-des">Stay up to date on the latest in web, mobile and game development.Plus receive exclusive content by subscribing to our newslatter.</p><div class="bd-row"><div class="bd-col"><input type="text" class="bd-form-control" name="name" id="name" placeholder="Your name" required></div><div class="bd-col"><input type="email" class="bd-form-control" name="email" id="email" placeholder="youremail@gmail.com" required></div></div><button type="submit" onclick="submitData()" class="bd-btn">Subscribe</button></div></div></div>');
+                        $(pop_up).appendTo('.bd-subscribe_block_page');
+                        $('.bd-subscribe_modal_close').on("click", function () {
+                            $(this).parent().fadeOut().remove();
+                            $('.bd-subscribe_block_page').fadeOut().remove();
+                        });
+                    }
+
+                    return this;
+                };
+            })(jQuery);
+            $(document).ready(function () {
+                $('<div class="bd-subscribe_modal"></div>').appendTo('body');
+                $('.bd-subscribe_modal').subscribe_modal_box();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="penugasanReviewerPTLanjutan.ascx.cs" Inherits="simlitekkes.UserControls.OperatorPT.penugasanReviewerPTLanjutan" %>
+Menu Penugasan Reviewer PT Lanjutan
