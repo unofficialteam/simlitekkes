@@ -22,6 +22,8 @@ namespace simlitekkes.UserControls.Pengusul
             {
                 mv1.SetActiveView(view0);
 
+                // test
+
                 // Informasi Pemenang pendaftaran Reviewer
                 DataTable dt = new DataTable();
                 //objPengusul.getInfoPemenangPendaftaranReviewer(ref dt, Guid.Parse(objLogin.idPersonal));
