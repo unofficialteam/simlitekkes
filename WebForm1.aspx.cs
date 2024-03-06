@@ -13,7 +13,7 @@ namespace simlitekkes
         {
             //if(!IsPostBack)
             //{
-            //    ktPerubahan.Visible = true;
+                ktPerubahan.Visible = true;
             //}
         }
     }
