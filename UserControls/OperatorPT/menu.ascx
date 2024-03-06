@@ -1,10 +1,10 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="simlitekkes.UserControls.OperatorPT.menu" %>
+﻿<%@ control language="C#" autoeventwireup="true" codebehind="menu.ascx.cs" inherits="simlitekkes.UserControls.OperatorPT.menu" %>
 <ul class="metismenu">
     <li class="nav-label">Menu Utama</li>
     <li class="mm-active">
-        <asp:LinkButton runat="server" ID="lbBeranda" OnClick="lbBeranda_Click">
+        <asp:linkbutton runat="server" id="lbBeranda" onclick="lbBeranda_Click">
             <i class="typcn typcn-home-outline mr-2"></i>Beranda
-        </asp:LinkButton>
+        </asp:linkbutton>
     </li>
     <li>
         <a class="has-arrow material-ripple" href="#">
@@ -13,12 +13,12 @@
         </a>
         <ul class="nav-second-level">
             <li>
-                <asp:LinkButton runat="server" ID="lbRekapUsulanBaru" OnClick="lbRekapUsulanBaru_Click">
+                <asp:linkbutton runat="server" id="lbRekapUsulanBaru" onclick="lbRekapUsulanBaru_Click">
                     <i class="fas fa-list mr-2"></i>Usulan Baru
-                </asp:LinkButton>
-                <asp:LinkButton runat="server" ID="lbRekapUsulanBaruAbdimas" OnClick="lbRekapUsulanBaruAbdimas_Click">
+                </asp:linkbutton>
+                <asp:linkbutton runat="server" id="lbRekapUsulanBaruAbdimas" onclick="lbRekapUsulanBaruAbdimas_Click">
                     <i class="fas fa-list mr-2"></i>Usulan Baru Abdimas
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
         </ul>
     </li>
@@ -29,14 +29,14 @@
         </a>
         <ul class="nav-second-level">
             <li>
-                <asp:LinkButton runat="server" ID="lbPenugasanReviewer" OnClick="lbPenugasanReviewer_Click">
+                <asp:linkbutton runat="server" id="lbPenugasanReviewer" onclick="lbPenugasanReviewer_Click">
                     <i class="fas fa-list mr-2"></i>Penugasan Reviewer
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbPlottingReviewer" OnClick="lbPlottingReviewer_Click">
+                <asp:linkbutton runat="server" id="lbPlottingReviewer" onclick="lbPlottingReviewer_Click">
                     <i class="fas fa-list mr-2"></i>Plotting Reviewer
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <%--            <li>
                 <asp:LinkButton runat="server" ID="lbPlottingReviewer3rd" OnClick="lbPlottingReviewer3rd_Click">
@@ -44,14 +44,14 @@
                 </asp:LinkButton>
             </li>--%>
             <li>
-                <asp:LinkButton runat="server" ID="lbPenetapanTahapan" OnClick="lbPenetapanTahapan_Click">
+                <asp:linkbutton runat="server" id="lbPenetapanTahapan" onclick="lbPenetapanTahapan_Click">
                     <i class="fas fa-list mr-2"></i>Penetapan Usulan Baru
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
-             <li>
-                <asp:LinkButton runat="server" ID="lbPenetapanUsulanLanjutan" OnClick="lbPenetapanUsulanLanjutan_Click">
+            <li>
+                <asp:linkbutton runat="server" id="lbPenetapanUsulanLanjutan" onclick="lbPenetapanUsulanLanjutan_Click">
                     <i class="fas fa-list mr-2"></i>Penetapan Usulan Lanjutan
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <%--            <li>
                 <asp:LinkButton runat="server" ID="lbHasilReview" OnClick="lbHasilReview_Click">
@@ -67,24 +67,29 @@
         </a>
         <ul class="nav-second-level">
             <li>
-                <asp:LinkButton runat="server" ID="lbMonitoringHasilReview" OnClick="lbMonitoringHasilReview_Click">
+                <asp:linkbutton runat="server" id="lbMonitoringHasilReview" onclick="lbMonitoringHasilReview_Click">
                     <i class="fas fa-list mr-2"></i>Hasil Review
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbMonitoringLapKemajuan" OnClick="lbMonitoringLapKemajuan_Click">
+                <asp:linkbutton runat="server" id="lbMonitoringLapKemajuan" onclick="lbMonitoringLapKemajuan_Click">
                     <i class="fas fa-list mr-2"></i>Laporan Kemajuan
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbMonitoringMonevEksternal" OnClick="lbMonitoringMonevEksternal_Click">
+                <asp:linkbutton runat="server" id="lbMonitoringMonevEksternal" onclick="lbMonitoringMonevEksternal_Click">
                     <i class="fas fa-list mr-2"></i>Hasil Monev Eksternal
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
-             <li>
-                <asp:LinkButton runat="server" ID="lbMonitoringLapAkhirTahun" OnClick="lbMonitoringLapAkhirTahun_Click">
+            <li>
+                <asp:linkbutton runat="server" id="lbMonitoringLapAkhirTahun" onclick="lbMonitoringLapAkhirTahun_Click">
                     <i class="fas fa-list mr-2"></i>Laporan Akhir Tahun
-                </asp:LinkButton>
+                </asp:linkbutton>
+            </li>
+            <li>
+                <asp:linkbutton runat="server" id="lbMonitoringPerbaikanProposal" onclick="lbMonitoringPerbaikanProposal_Click">
+                    <i class="fas fa-list mr-2"></i>Perbaikan Proposal
+                </asp:linkbutton>
             </li>
         </ul>
     </li>
@@ -95,45 +100,45 @@
         </a>
         <ul class="nav-second-level">
             <li>
-                <asp:LinkButton runat="server" ID="lbProfilLembaga" OnClick="lbProfilLembaga_Click">
+                <asp:linkbutton runat="server" id="lbProfilLembaga" onclick="lbProfilLembaga_Click">
                     <i class="fas fa-list mr-2"></i>Profil Lembaga
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbSinkronisasi" OnClick="lbSinkronisasi_Click">
+                <asp:linkbutton runat="server" id="lbSinkronisasi" onclick="lbSinkronisasi_Click">
                     <i class="fas fa-list mr-2"></i>Sinkronisasi Dosen
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbKelolaTendikNonDosen" OnClick="lbKelolaTendikNonDosen_Click">
+                <asp:linkbutton runat="server" id="lbKelolaTendikNonDosen" onclick="lbKelolaTendikNonDosen_Click">
                     <i class="fas fa-list mr-2"></i>Kelola Tendik Non-Dosen
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbPencarianAkunDosen" OnClick="lbPencarianAkunDosen_Click">
+                <asp:linkbutton runat="server" id="lbPencarianAkunDosen" onclick="lbPencarianAkunDosen_Click">
                     <i class="fas fa-list mr-2"></i>Pencarian Akun Dosen
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbUnggahDokumenRenstra" OnClick="lbUnggahDokumenRenstra_Click">
+                <asp:linkbutton runat="server" id="lbUnggahDokumenRenstra" onclick="lbUnggahDokumenRenstra_Click">
                     <i class="fas fa-list mr-2"></i>Unggah Dokumen Renstra
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbBidangUnngulanPT" OnClick="lbBidangUnngulanPT_Click">
+                <asp:linkbutton runat="server" id="lbBidangUnngulanPT" onclick="lbBidangUnngulanPT_Click">
                     <i class="fas fa-list mr-2"></i>Bidang Unggulan PT
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
             <li>
-                <asp:LinkButton runat="server" ID="lbTopikUnggulanPT" OnClick="lbTopikUnggulanPT_Click">
+                <asp:linkbutton runat="server" id="lbTopikUnggulanPT" onclick="lbTopikUnggulanPT_Click">
                     <i class="fas fa-list mr-2"></i>Topik Unggulan PT
-                </asp:LinkButton>
+                </asp:linkbutton>
             </li>
         </ul>
     </li>
     <li>
-        <asp:LinkButton runat="server" ID="lbLogout" OnClick="lbLogout_Click">
+        <asp:linkbutton runat="server" id="lbLogout" onclick="lbLogout_Click">
             <i class="typcn typcn-arrow-minimise mr-2"></i>Logout
-        </asp:LinkButton>
+        </asp:linkbutton>
     </li>
 </ul>

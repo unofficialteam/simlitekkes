@@ -4198,6 +4198,7 @@
     <Compile Include="Models\PT\monitoringLapAkhirThn.cs" />
     <Compile Include="Models\PT\monitoringLapKemajuan.cs" />
     <Compile Include="Models\PT\monitoringMonevEksternal.cs" />
+    <Compile Include="Models\PT\monitoringPerbaikanUsulan.cs" />
     <Compile Include="Models\PT\OperatorPT.cs" />
     <Compile Include="Models\PT\penetapanUsulanBaru.cs" />
     <Compile Include="Models\PT\penetapanUsulanLanjutan.cs" />

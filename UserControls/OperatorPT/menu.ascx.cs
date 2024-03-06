@@ -100,6 +100,11 @@ namespace simlitekkes.UserControls.OperatorPT
             Response.Redirect("Main.aspx");
         }
 
+        protected void lbMonitoringPerbaikanProposal_Click(object sender, EventArgs e)
+        {
+            setLaman(36);
+        }
+
         private void CleanSession()
         {
             if (Session["usulan_kegiatan"] != null)
