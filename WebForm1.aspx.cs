@@ -11,10 +11,10 @@ namespace simlitekkes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
-            {
-                //ktPerubahan.Visible = true;
-            }
+            //if(!IsPostBack)
+            //{
+            //    ktPerubahan.Visible = true;
+            //}
         }
     }
 }
