@@ -56,7 +56,7 @@
       <HintPath>packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
     </Reference>
     <Reference Include="DataAccess">
-      <HintPath>..\Simlitekkes\bin\DataAccess.dll</HintPath>
+      <HintPath>..\..\..\FILE WAWAN\PROJECT\simlitabkes\bin\DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <HintPath>packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
@@ -3697,6 +3697,8 @@
     <Content Include="bin\Npgsql.dll" />
     <Content Include="Default.aspx" />
     <Content Include="fileUpload20\fileFoto\1afbdc09-b31e-4452-9c49-83ffa351a2ac.jpg" />
+    <Content Include="fileUpload\fileFoto\4f891a25-5066-497e-b816-50edf7936fb2.jpg" />
+    <Content Include="fileUpload\pengumuman\2021\3\7a1d86d4-4f93-4cea-9287-f6df1847bf6e.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Helper\captchaImg.aspx" />
     <Content Include="Helper\controlPaging.ascx" />
@@ -6670,6 +6672,39 @@
     <Content Include="assets\dist\fonts\ds_digital\DS-DIGIB.TTF" />
     <Content Include="assets\dist\fonts\ds_digital\DS-DIGII.TTF" />
     <Content Include="assets\dist\fonts\ds_digital\DS-DIGIT.TTF" />
+    <Content Include="fileUpload\dokAkreditasiTPPTPM\2023\07882572-3475-4a96-8a56-42191b52aa4d.pdf" />
+    <Content Include="fileUpload\dokAkreditasiTPPTPM\2023\3b07be2f-738e-47c6-9155-5109d432dab6.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2020\325b3044-2144-4e34-9c96-6232525a09dc.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2020\df62bef0-13f9-4c6f-8f67-a94efde0fb43.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2020\fc4bf310-1990-4781-9e64-25fc6a829079.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2021\17cb1e9d-e9c0-4443-bbab-651c72a2106c.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2021\47da599d-da04-4937-b99f-8dfea31a84f2.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2021\6a9dcd29-db0f-483c-a13d-f214aa09ca76.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2021\88bcfcd4-ebf1-4d5e-a80f-0065487f0ebc.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2021\9ab748ba-6b38-49d7-896e-064ef49363a7.pdf" />
+    <Content Include="fileUpload\dokumenUsulan\2023\f1d3d4e2-40cf-4ac6-bc2b-17f639f23e8e.pdf" />
+    <Content Include="fileUpload\fileBuku\00000000-0000-0000-0000-000000000000.pdf" />
+    <Content Include="fileUpload\fileBuku\afb47f60-5b6f-4595-b62f-79ee71a5d96f.pdf" />
+    <Content Include="fileUpload\laporan_akhir\2022\34d35b97-8cef-4f9c-b40d-70b545ddb973.pdf" />
+    <Content Include="fileUpload\laporan_akhir\2022\4466a593-7de2-4528-a67b-cc38a731d4cc.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\2021\a1e6ff5a-68e5-4072-bb6a-f22ae9f86ae3.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\BuktiLuaran\2021\158edc45-b249-47ff-80c9-86494b35845e.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\BuktiLuaran\2021\b4ae547d-9f69-475c-b25b-c518bd76f508.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\BuktiLuaran\2021\b7e2c8e6-5d0a-4067-8128-524932423e57.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\BuktiLuaran\2021\e90913cb-0458-4fc6-8e21-65cae69babb1.pdf" />
+    <Content Include="fileUpload\laporan_kemajuan\BuktiLuaran\2021\eb7eb978-1f1c-41a2-8128-a8986d337494.pdf" />
+    <Content Include="fileUpload\Mitra\2020\242e8662-6cdf-4d20-b0d7-21da22a7d9e4.pdf" />
+    <Content Include="fileUpload\Mitra\2020\43876cdd-7629-4963-beaf-003f295e06e0.pdf" />
+    <Content Include="fileUpload\Mitra\2020\d25edcd3-bea0-4ac4-8037-d474f72f5e56.pdf" />
+    <Content Include="fileUpload\Mitra\2021\0ed1b8b7-0fa5-48cf-aa16-edbf8a00cca3.pdf" />
+    <Content Include="fileUpload\Mitra\2021\5ae1dcff-a5fa-40b3-9ede-5b21c690d593.pdf" />
+    <Content Include="fileUpload\Mitra\2021\d00ec39f-8a21-4f01-80bc-64abd4499633.pdf" />
+    <Content Include="fileUpload\Mitra\2021\e8d9ebbd-e42f-4bc9-8659-63005fc12817.pdf" />
+    <Content Include="fileUpload\Mitra\2021\f7472d76-5e2b-4632-b988-ad9b2fa1c1b6.pdf" />
+    <Content Include="fileUpload\Mitra\2023\ce753069-da58-4909-ae38-66ccaeac8267.pdf" />
+    <Content Include="fileUpload\pengumuman\2021\3\7a1d86d4-4f93-4cea-9287-f6df1847bf6e.pdf" />
+    <Content Include="fileUpload\realisasi_mitra\2021\d872ceec-8f82-45c7-ae19-83c172a9f975.pdf" />
+    <Content Include="fileUpload\SK\88826407-b969-423d-ac33-720429810234.pdf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

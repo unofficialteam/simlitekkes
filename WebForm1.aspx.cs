@@ -14,6 +14,7 @@ namespace simlitekkes
             //if(!IsPostBack)
             //{
                 ktPerubahan.Visible = true;
+            // tes wawan
             //}
         }
     }
