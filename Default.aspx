@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="simlitekkes.Default" %>
+﻿<%@ page language="C#" autoeventwireup="true" codebehind="Default.aspx.cs" inherits="simlitekkes.Default" %>
 
 <!DOCTYPE html>
 
@@ -197,10 +197,10 @@
                             <img src="assets/plugins/blogmag/img/sliders/1.png" alt="in_th_030_01" />
                             <!-- Slide Text Layer -->
                             <div class="in_th_030_slide" data-animation="animated slideInDown">
-                                <div class="home_banner_text" style="color:#fff;">
-                                    <h2 style="color:#fff;">Edu Health Fair 2020</h2>
-                                    <div class="author-detail" style="font-size:20px;">
-                                        <i class="icon-clock"></i> 5-6 November 2020
+                                <div class="home_banner_text" style="color: #fff;">
+                                    <h2 style="color: #fff;">Edu Health Fair 2020</h2>
+                                    <div class="author-detail" style="font-size: 20px;">
+                                        <i class="icon-clock"></i>5-6 November 2020
                                     </div>
                                 </div>
                             </div>
@@ -235,10 +235,10 @@
                             <img src="assets/plugins/blogmag/img/sliders/3.png" alt="in_th_030_03" />
                             <!-- Slide Text Layer -->
                             <div class="in_th_030_slide in_th_030_slide_right" data-animation="animated slideInLeft">
-                                <div class="home_banner_text" style="color:#fff;">
-                                    <h2 style="color:#fff;">VAKSINASI COVID-19 TAHAP 2</h2>
-                                    <div class="author-detail" style="font-size:20px;">
-                                        <i class="icon-clock"></i> Mei 2021
+                                <div class="home_banner_text" style="color: #fff;">
+                                    <h2 style="color: #fff;">VAKSINASI COVID-19 TAHAP 2</h2>
+                                    <div class="author-detail" style="font-size: 20px;">
+                                        <i class="icon-clock"></i>Mei 2021
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +272,8 @@
                                     <div class="col-md-12">
                                         <div class="section-title">
                                             <h2>
-                                                <asp:Label ID="Judul" runat="server" Text=""></asp:Label></h2>
+                                                <asp:Label ID="Judul" runat="server" Text=""></asp:Label>
+                                            </h2>
                                         </div>
                                         <div class="form-group">
                                             <div class="row">
@@ -291,9 +292,9 @@
                                         <asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
                                         <asp:GridView runat="server" ID="gvPengumuman" AutoGenerateColumns="false" Width="100%"
                                             Border="0" BorderStyle="None" GridLines="None" OnRowDataBound="gvPengumuman_RowDataBound" DataKeyNames="id_pengumuman,tgl_surat" OnRowCommand="gvPengumuman_RowCommand">
-                                            <Columns>
+                                            <columns>
                                                 <asp:TemplateField>
-                                                    <ItemTemplate>
+                                                    <itemtemplate>
                                                         <div>
                                                             <h5 style="color: #3e8607;"><span class="icon-calendar"></span>&nbsp;
                                                                 <asp:Label ID="lblTglSurat" runat="server" Text='<%# ConvertDateTimeToDate(Eval("tgl_surat").ToString(), "dd MMMM yyyy", "id-ID") %>'></asp:Label>
@@ -311,44 +312,46 @@
                                                             <span style="font-weight: bold;">BERKAS</span>
                                                             <asp:GridView runat="server" ID="gvInternal" DataKeyNames="file_pengumuman" AutoGenerateColumns="false" ShowHeader="false"
                                                                 BorderStyle="None" GridLines="None" OnRowCommand="gvInternal_RowCommand" OnRowDataBound="gvInternal_RowDataBound">
-                                                                <Columns>
+                                                                <columns>
                                                                     <asp:TemplateField>
-                                                                        <ItemTemplate>
+                                                                        <itemtemplate>
                                                                             <asp:LinkButton ID="lbJudulFile" runat="server" CausesValidation="false" CommandName="Unduh" Text='<%# Eval("judul_file") %>'
-                                                                                CommandArgument='<%# Eval("file_pengumuman") + "," + Eval("tgl_surat")%>'></asp:LinkButton>
+                                                                                CommandArgument='<%# Eval("file_pengumuman") + "," + Eval("tgl_surat")%>'>
+                                                                            </asp:LinkButton>
                                                                             <asp:LinkButton ID="lbIkon" runat="server" CssClass="btn" ForeColor="Red" CommandName="Unduh"
-                                                                                CommandArgument='<%# Eval("file_pengumuman") + "," + Eval("tgl_surat")%>'></asp:LinkButton>
+                                                                                CommandArgument='<%# Eval("file_pengumuman") + "," + Eval("tgl_surat")%>'>
+                                                                            </asp:LinkButton>
                                                                             <asp:LinkButton runat="server" ID="lbFileHid" Text='<%# Eval("file_pengumuman") %>' Visible="false"></asp:LinkButton>
-                                                                        </ItemTemplate>
+                                                                        </itemtemplate>
                                                                     </asp:TemplateField>
-                                                                </Columns>
-                                                                <EmptyDataTemplate>
+                                                                </columns>
+                                                                <emptydatatemplate>
                                                                     CommandName="Unduh" 
                                                                     <div style="min-height: 100px; margin: 0 auto;">
                                                                         <strong>DATA TIDAK DITEMUKAN</strong>
                                                                     </div>
-                                                                </EmptyDataTemplate>
+                                                                </emptydatatemplate>
                                                             </asp:GridView>
                                                         </div>
                                                         <hr />
-                                                    </ItemTemplate>
+                                                    </itemtemplate>
                                                 </asp:TemplateField>
-                                            </Columns>
+                                            </columns>
                                         </asp:GridView>
                                     </div>
                                     <div class="col-md-12">
                                         <asp:Menu ID="MenuPage" runat="server" Orientation="Horizontal" BackColor="#F7F6F3"
                                             DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="12px" ForeColor="#2C7F27"
                                             StaticSubMenuIndent="10px" OnMenuItemClick="menu_event">
-                                            <Items>
-                                            </Items>
-                                            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
-                                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                            <DynamicMenuStyle BackColor="#F7F6F3" />
-                                            <DynamicSelectedStyle BackColor="#9D7B5D" />
-                                            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
-                                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
-                                            <StaticSelectedStyle BackColor="#DD7B5D" Font-Bold="true" ForeColor="White" />
+                                            <items>
+                                            </items>
+                                            <dynamichoverstyle backcolor="#7C6F57" forecolor="White" />
+                                            <dynamicmenuitemstyle horizontalpadding="5px" verticalpadding="2px" />
+                                            <dynamicmenustyle backcolor="#F7F6F3" />
+                                            <dynamicselectedstyle backcolor="#9D7B5D" />
+                                            <statichoverstyle backcolor="#7C6F57" forecolor="White" />
+                                            <staticmenuitemstyle horizontalpadding="5px" verticalpadding="2px" />
+                                            <staticselectedstyle backcolor="#DD7B5D" font-bold="true" forecolor="White" />
                                         </asp:Menu>
                                     </div>
                                 </div>
@@ -361,15 +364,15 @@
                                 <ul class="post-category">
                                     <%--<li class="filter" data-filter=".women"><i class="icon-layers"></i>&nbsp;Tautan</li>--%>
                                     <li class="filter" data-filter=".men" style="border-radius: 5px; background-color: #2a750b;"><i class="icon-layers"></i>&nbsp;&nbsp;Arsip</li>
-                                    <%--<li class="filter" data-filter=".trend"><i class="icon-layers"></i>&nbsp;e-Book</li>--%>
+                                    <li class="filter" data-filter=".trend"><i class="icon-layers"></i>&nbsp;e-Book</li>
                                 </ul>
                             </div>
                             <div class="tech-box tech-categories men mix">
                                 <asp:GridView runat="server" ID="gvMenuPengumumanTahun" AutoGenerateColumns="false" Width="100%"
                                     Border="0" BorderStyle="None" GridLines="None" OnRowDataBound="gvMenuPengumumanTahun_RowDataBound" DataKeyNames="tahun" OnRowCommand="gvMenuPengumumanTahun_RowCommand" ShowHeader="False">
-                                    <Columns>
+                                    <columns>
                                         <asp:TemplateField>
-                                            <ItemTemplate>
+                                            <itemtemplate>
                                                 <div class="post-title">
                                                     <h3>
                                                         <asp:Label ID="lblTahun" runat="server"><%# Eval("tahun") %></asp:Label></h3>
@@ -378,31 +381,43 @@
                                                     <ul>
                                                         <asp:GridView runat="server" ID="gvMenuPengumumanBulan" DataKeyNames="tahun,bulan" AutoGenerateColumns="false" ShowHeader="false"
                                                             BorderStyle="None" GridLines="None" OnRowCommand="gvMenuPengumumanBulan_RowCommand" OnRowDataBound="gvMenuPengumumanBulan_RowDataBound">
-                                                            <Columns>
+                                                            <columns>
                                                                 <asp:TemplateField>
-                                                                    <ItemTemplate>
+                                                                    <itemtemplate>
                                                                         <li>
                                                                             <asp:LinkButton ID="lbBulan" runat="server" CausesValidation="false" CommandName="Bulan" Text='<%# Eval("txtbulan") %>' ForeColor="#808080"
-                                                                                CommandArgument='<%# Eval("tahun") + "," + Eval("bulan")%>'></asp:LinkButton>
+                                                                                CommandArgument='<%# Eval("tahun") + "," + Eval("bulan")%>'>
+                                                                            </asp:LinkButton>
                                                                         </li>
-                                                                    </ItemTemplate>
+                                                                    </itemtemplate>
                                                                 </asp:TemplateField>
-                                                            </Columns>
+                                                            </columns>
                                                         </asp:GridView>
                                                     </ul>
                                                 </div>
-                                            </ItemTemplate>
+                                            </itemtemplate>
                                         </asp:TemplateField>
-                                    </Columns>
+                                    </columns>
                                 </asp:GridView>
                             </div>
                             <div class="tech-outer trend mix">
                                 <div class="tech-categories">
                                     <div class="category-items">
                                         <ul>
-                                            <li><a href="http://simlitabmas.ristekdikti.go.id/profilPenelitianDanPpm.aspx"><i class="icon-layers"></i>Profil Penelitian dan PPM</a></li>
-                                            <li><a href="http://simlitabmas.ristekdikti.go.id/profilHKIdanJurnal.aspx"><i class="icon-layers"></i>Profil Jurnal Ilmiah</a></li>
-                                            <li><a href="http://simlitabmas.ristekdikti.go.id/panduanEdisiX.aspx"><i class="icon-layers"></i>Panduan Kegiatan</a></li>
+                                            <li><a href="dokumen/ebook/Pedoman Penelitian Poltekkes 2023/index.html" target="_blank"><i class="icon-layers"></i>
+                                                Pedoman Penelitian Poltekkes Tahun 2023</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tech-outer trend mix">
+                                <div class="tech-categories">
+                                    <div class="category-items">
+                                        <ul>
+                                            <li><a href="dokumen/ebook/Pedoman Penelitian dan Pengabmas Poltekkes Tahun 2021/index.html" target="_blank"><i class="icon-layers"></i>
+                                                Pedoman Penelitian dan Pengabmas Poltekkes Tahun 2021</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
