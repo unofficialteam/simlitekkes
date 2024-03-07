@@ -110,6 +110,11 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
             setLaman(13);
         }
 
+        protected void lbPenetapanUsulanLanjutan_Click(object sender, EventArgs e)
+        {
+            setLaman(14);
+        }
+
         #endregion
 
         #region Menu Monitoring

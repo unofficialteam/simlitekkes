@@ -3758,6 +3758,7 @@
     <Content Include="UserControls\OperatorPenelitianPusdik\monitoringPlottingReviewerPengabdian.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\operatorPT.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\penetapanUsulanBaru.ascx" />
+    <Content Include="UserControls\OperatorPenelitianPusdik\penetapanUsulanLanjutan.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\pengirimanUserPasswordOperator.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\penugasanReviewer.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\perubahanJudul.ascx" />
@@ -4127,6 +4128,7 @@
     <Compile Include="Models\OperatorPenelitianPusdik\monitoringPerbaikanUsulan.cs" />
     <Compile Include="Models\OperatorPenelitianPusdik\monitoringPlottingReviewer.cs" />
     <Compile Include="Models\OperatorPenelitianPusdik\penetapanUsulanBaru.cs" />
+    <Compile Include="Models\OperatorPenelitianPusdik\penetapanUsulanLanjutan.cs" />
     <Compile Include="Models\OperatorPenelitianPusdik\perubahanPersonil.cs" />
     <Compile Include="Models\OperatorPenelitianPusdik\plottingReviewer.cs" />
     <Compile Include="Models\PDDIKTI\authorization.cs" />
@@ -4576,6 +4578,13 @@
     </Compile>
     <Compile Include="UserControls\OperatorPenelitianPusdik\penetapanUsulanBaru.ascx.designer.cs">
       <DependentUpon>penetapanUsulanBaru.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperatorPenelitianPusdik\penetapanUsulanLanjutan.ascx.cs">
+      <DependentUpon>penetapanUsulanLanjutan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperatorPenelitianPusdik\penetapanUsulanLanjutan.ascx.designer.cs">
+      <DependentUpon>penetapanUsulanLanjutan.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OperatorPenelitianPusdik\pengirimanUserPasswordOperator.ascx.cs">
       <DependentUpon>pengirimanUserPasswordOperator.ascx</DependentUpon>

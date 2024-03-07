@@ -69,6 +69,15 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
         protected global::System.Web.UI.WebControls.LinkButton lbPenetapanUsulanBaru;
 
         /// <summary>
+        /// lbPenetapanUsulanLanjutan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbPenetapanUsulanLanjutan;
+
+        /// <summary>
         /// menu_monitoring control.
         /// </summary>
         /// <remarks>

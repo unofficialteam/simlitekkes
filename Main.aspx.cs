@@ -322,7 +322,10 @@ namespace simlitekkes
                             break;
                         case "13":
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPenelitianPusdik/penetapanUsulanBaru.ascx"));
-                            break;                        
+                            break;
+                        case "14":
+                            phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPenelitianPusdik/penetapanUsulanLanjutan.ascx"));
+                            break;
                         // End
 
                         // Start Monitoring
