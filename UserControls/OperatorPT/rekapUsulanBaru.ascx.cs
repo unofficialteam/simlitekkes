@@ -32,9 +32,20 @@ namespace simlitekkes.UserControls.OperatorPT
                     lbdesentralisasi.CssClass = "btn btn-outline-success";
                     lbPenugasan.CssClass = "btn btn-outline-secondary";
                 }
-
+                isiDdlThnPelaksanaan();
                 isiRekap();
                 mvRekapUsulanBaru.SetActiveView(vDaftar);
+            }
+        }
+
+        private void isiDdlThnPelaksanaan()
+        {
+            ddlThn.Items.Clear();
+            //ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem("--Pilih--", "0000"));
+            int thnSKg = int.Parse(DateTime.Now.Year.ToString());
+            for (int i = thnSKg; i >= 2020; i--)
+            {
+                ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem(i.ToString(), i.ToString()));
             }
         }
 

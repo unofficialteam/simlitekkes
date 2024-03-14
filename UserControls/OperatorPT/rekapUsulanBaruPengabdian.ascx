@@ -39,11 +39,11 @@
                             <asp:DropDownList ID="ddlThn" AutoPostBack="true" runat="server" Enabled="true"
                                 ClientIDMode="Static" Width="100px" CssClass="form-control"
                                 OnSelectedIndexChanged="ddlThn_SelectedIndexChanged">
-                                <asp:ListItem Selected="True">2024</asp:ListItem>
+                                <%--<asp:ListItem Selected="True">2024</asp:ListItem>
                                 <asp:ListItem>2023</asp:ListItem>
                                 <asp:ListItem>2022</asp:ListItem>
                                 <asp:ListItem>2021</asp:ListItem>
-                                <asp:ListItem>2020</asp:ListItem>
+                                <asp:ListItem>2020</asp:ListItem>--%>
 <%--                                <asp:ListItem>2019</asp:ListItem>
                                 <asp:ListItem>2018</asp:ListItem>--%>
                             </asp:DropDownList>
