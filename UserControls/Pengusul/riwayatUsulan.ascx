@@ -13,7 +13,8 @@
                 <asp:GridView runat="server" ID="gvUsulan" AutoGenerateColumns="false" Width="100%"
                     BorderWidth="0" OnRowDataBound="gvUsulan_RowDataBound"
                     DataKeyNames="id_transaksi_unggah_proposal,kd_sts_unggah_proposal,judul,
-                                program_hibah,kd_peran_personil,thn_usulan_kegiatan,thn_pelaksanaan_kegiatan"
+                    program_hibah,kd_peran_personil,thn_usulan_kegiatan,
+                    thn_pelaksanaan_kegiatan, kd_sts_permanen"
                     OnRowCommand="gvUsulan_RowCommand" GridLines="None" CssClass="table" ShowHeader="false">
                     <Columns>
                         <asp:TemplateField>
@@ -45,7 +46,11 @@
                                             <div class="col-md-4">
                                                 <asp:Label runat="server" ID="lblUsulanPersonil" Text='<%# Eval("personil") %>'></asp:Label>
                                             </div>
-                                            <div class="col-md-8" style="margin-top:15px;">
+                                            <div class="col-md-8" style="margin-top: 15px;">
+                                                <asp:Label ID="lblStsDidanai" runat="server" BackColor="Aqua" Font-Bold="true"
+                                                    Text='<%# "Status Usulan: " + Eval("status_didanai") %>'
+                                                    Visible='<%# (Eval("kd_sts_permanen").ToString() == "1") ? true : false %>'></asp:Label>
+                                                <hr />
                                                 <asp:Label ID="lblStatusUsulan" runat="server" Text='<%# Eval("status_usulan") %>'></asp:Label>
                                             </div>
                                         </div>
@@ -78,6 +83,6 @@
 </div>
 
 <div>
-    <uc:pdfUsulanLengkap runat="server" ID="pdfUsulanLengkap" Visible="false" />
+    <uc:pdfusulanlengkap runat="server" id="pdfUsulanLengkap" visible="false" />
 </div>
 
