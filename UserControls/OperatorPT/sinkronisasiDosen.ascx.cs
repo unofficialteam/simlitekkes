@@ -251,7 +251,7 @@ namespace simlitekkes.UserControls.OperatorPT
 
             if (tbNIDN.Text.Trim() != "")
             {
-                const string BaseUrl = "https://api.kemdikbud.go.id:8243/pddikti/1.2/";
+                const string BaseUrl = "https://api.kemdikbud.go.id:8443/pddikti-api/1.2/";
                 //const string Token = "00000000-0000-0000-0000-000000000000";
                 string Token = "00000000-0000-0000-0000-000000000000";
                 var dtToken = new DataTable();
@@ -556,10 +556,10 @@ namespace simlitekkes.UserControls.OperatorPT
 
         protected void generateToken()
         {
-            const string ConsumerKey = "zGlDuVwOBp3BHY9nBLNmqtW48yEa";
-            const string ConsumerSecret = "zztzfeVILepYXXze7IE3Qa__zc0a";
+            const string ConsumerKey = "1phcQgOuXEwm4uh6kN0YF2Bwf9FIA5OK";
+            const string ConsumerSecret = "1qB56sSuOBB6pSDRxuFV6TR6KDkw5VGO";
 
-            const string BaseUrl = "https://api.kemdikbud.go.id:8243/token";
+            const string BaseUrl = "https://api.kemdikbud.go.id:8443/pddikti-api/oauth2/token";
 
             var client = new RestClient();
             client.BaseUrl = new Uri(BaseUrl);
@@ -574,7 +574,7 @@ namespace simlitekkes.UserControls.OperatorPT
             {
                 var deserialize = new JsonDeserializer();
                 var token = deserialize.Deserialize<Models.PT.Token>(response);
-                modelSinkronisasi.updateToken(Guid.Parse(token.access_token));
+                modelSinkronisasi.updateToken(token.access_token);
                 getDataPddikti();
             }
             else

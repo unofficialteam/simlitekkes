@@ -41,7 +41,7 @@ namespace simlitekkes.Models.PT
 
         #region Methods
 
-        public bool updateToken(Guid token)
+        public bool updateToken(string token)
         {
             bool isSuccess = false;
 
