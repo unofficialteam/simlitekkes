@@ -42,8 +42,8 @@ namespace simlitekkes.UserControls.OperatorPT
         {
             ddlThn.Items.Clear();
             //ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem("--Pilih--", "0000"));
-            int thnSKg = int.Parse(DateTime.Now.Year.ToString());
-            for (int i = thnSKg; i >= 2020; i--)
+            //int thnSKg = int.Parse(DateTime.Now.Year.ToString());
+            for (int i = DateTime.Now.Year + 1; i >= 2020; i--)
             {
                 ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem(i.ToString(), i.ToString()));
             }
