@@ -49,15 +49,15 @@ namespace simlitekkes.UserControls.Pengusul
             if (objMitra.listMitraPelaksanaPenelitian(ref dtMitra, Guid.Parse(idUsulanKegiatan), p_jml_data, p_offset))
             {
                 var drmitrapelaksana = dtMitra.Select("kd_kategori_mitra = 1");
-                if(drmitrapelaksana.Length > 0)
+                if (drmitrapelaksana.Length > 0)
                 {
                     var dt = drmitrapelaksana.CopyToDataTable();
                     gvMitraPelaksanaPenelitian.DataSource = dt;
                     //gvMitraPelaksanaPenelitian.DataBind();
-                }               
+                }
 
                 var drmitracalonpengguna = dtMitra.Select("kd_kategori_mitra = 2");
-                if(drmitracalonpengguna.Length > 0)
+                if (drmitracalonpengguna.Length > 0)
                 {
                     var dtcalon = drmitracalonpengguna.CopyToDataTable();
                     gvMitraCalonPengguna.DataSource = dtcalon;
@@ -114,9 +114,9 @@ namespace simlitekkes.UserControls.Pengusul
                 case "75": //PP
                     panelSuratPernyataan.Visible = true;
                     break;
-                //case "72": //KRU-PT
-                //case "77": //KKS
-                //    break;
+                    //case "72": //KRU-PT
+                    //case "77": //KKS
+                    //    break;
             }
 
             if (ViewState["mitraPelaksana"].ToString() == "1")
@@ -151,7 +151,7 @@ namespace simlitekkes.UserControls.Pengusul
                 lblInfoMitra.Visible = true;
             }
 
-            if(lblLamaUsulan.Text == "1")
+            if (lblLamaUsulan.Text == "1")
             {
                 tbPendanaanThn1.Visible = true;
                 tbPendanaanThn2.Visible = false;
@@ -174,7 +174,7 @@ namespace simlitekkes.UserControls.Pengusul
                 lblDanaMIThn2.Visible = false;
                 lblDanaMIThn3.Visible = false;
             }
-            else if(lblLamaUsulan.Text == "2")
+            else if (lblLamaUsulan.Text == "2")
             {
                 tbPendanaanThn1.Visible = true;
                 tbPendanaanThn2.Visible = true;
@@ -300,14 +300,14 @@ namespace simlitekkes.UserControls.Pengusul
             string danaThn3 = tbPendanaanThn3.Text;
             int kdKategoriMitra = 1;
 
-                if (!objMitra.insupMitraPelaksana(Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), namaMitraPelaksana, namaInstitusiMitra, alamatInstitusiMitra
-                            , surel, kdNegara, kdKategoriMitra, idMitra))
-                {
-                    noty.Notify(this.Page, uiNotify.NotifyType.error, "Terjadi Kesalahan",
-                       objMitra.errorMessage);
-                }
+            if (!objMitra.insupMitraPelaksana(Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), namaMitraPelaksana, namaInstitusiMitra, alamatInstitusiMitra
+                        , surel, kdNegara, kdKategoriMitra, idMitra))
+            {
+                noty.Notify(this.Page, uiNotify.NotifyType.error, "Terjadi Kesalahan",
+                   objMitra.errorMessage);
+            }
 
-            if(tbPendanaanThn1.Text != "")
+            if (tbPendanaanThn1.Text != "")
             {
                 if (!objMitra.insupDanaMitraPelaksana(Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), 1, idMitra, danaThn1, kdKategoriMitra))
                 {
@@ -337,7 +337,7 @@ namespace simlitekkes.UserControls.Pengusul
             isiMitra(ViewState["id_usulan_kegiatan"].ToString());
             clearMitraPelaksana();
             mvMitra.SetActiveView(vMitraPelaksanaPenelitian);
-           
+
         }
 
         private void clearMitraPelaksana()
@@ -353,7 +353,7 @@ namespace simlitekkes.UserControls.Pengusul
         }
 
         private void clearMCP()
-        { 
+        {
             tbNamaMCPengguna.Text = "";
             tbAlamatInstitusiMCP.Text = "";
             tbAlamatSurelMCP.Text = "";
@@ -398,7 +398,7 @@ namespace simlitekkes.UserControls.Pengusul
                 }
             }
 
-            string filePath = string.Format("~/fileUpload/Mitra/{0}/{1}.pdf", 
+            string filePath = string.Format("~/fileUpload/Mitra/{0}/{1}.pdf",
                 ViewState["thn_usulan"].ToString(), idMitra);
             if (File.Exists(Server.MapPath(filePath)))
             {
@@ -417,7 +417,7 @@ namespace simlitekkes.UserControls.Pengusul
             {
                 noty.Notify(this.Page, uiNotify.NotifyType.error, "Terjadi Kesalahan",
                    objMitra.errorMessage);
-            }       
+            }
         }
 
         public bool ApaBerkasMasihAda(Page thePage, string fileName, string fileFolder)
@@ -462,7 +462,7 @@ namespace simlitekkes.UserControls.Pengusul
             var idMitra = Guid.Parse(gvMitraPelaksanaPenelitian.DataKeys[e.RowIndex]["id_mitra"].ToString());
             var dt = new DataTable();
             if (objMitra.getDataMitraPelaksana(ref dt, Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), idMitra))
-            {               
+            {
                 if (dt.Rows.Count > 0)
                 {
                     tbNamaMitraPelaksana.Text = dt.Rows[0]["nama_mitra"].ToString();
@@ -478,11 +478,11 @@ namespace simlitekkes.UserControls.Pengusul
                     {
                         tbPendanaanThn1.Text = decimal.Parse(dt.Rows[0]["dana_thn_1"].ToString()).ToString("N0", CultureInfo.InvariantCulture);
                     }
-                    if (danaThn2 !="")
+                    if (danaThn2 != "")
                     {
                         tbPendanaanThn2.Text = decimal.Parse(dt.Rows[0]["dana_thn_2"].ToString()).ToString("N0", CultureInfo.InvariantCulture);
                     }
-                    if(danaThn3 !="")
+                    if (danaThn3 != "")
                     {
                         tbPendanaanThn3.Text = decimal.Parse(dt.Rows[0]["dana_thn_3"].ToString()).ToString("N0", CultureInfo.InvariantCulture);
                     }
@@ -556,7 +556,7 @@ namespace simlitekkes.UserControls.Pengusul
                     lblDanaThn3.Visible = true;
                 }
 
-                if(lblUrutanUsulan.Text == "3")
+                if (lblUrutanUsulan.Text == "3")
                 {
                     lblDana1.Visible = false;
                     lblDana2.Visible = false;
@@ -588,7 +588,7 @@ namespace simlitekkes.UserControls.Pengusul
         }
 
         protected void gvMitraPelaksanaPenelitian_RowCommand(object sender, GridViewCommandEventArgs e)
-        {            
+        {
             int rowIndex = int.Parse(e.CommandArgument.ToString());
             Guid idMitra = Guid.Parse(gvMitraPelaksanaPenelitian.DataKeys[rowIndex]["id_mitra"].ToString());
 
@@ -601,7 +601,7 @@ namespace simlitekkes.UserControls.Pengusul
                     Directory.CreateDirectory(Server.MapPath(dirFile));
                 }
                 ktUnggah.path2save = dirFile + "/" + idMitra + ".pdf";
-                
+
                 ktUnggah.max_size = 1024 * 1024; // 500KB
                 ktUnggah.alllowed_ext = "pdf;PDF";
                 ktUnggah.success_info = "Unggah dokumen Mitra Pelaksana berhasil";
@@ -618,10 +618,10 @@ namespace simlitekkes.UserControls.Pengusul
                 namaFile = objManipData.removeUnicode(namaFile);
                 string filePath = string.Format("~/fileUpload/Mitra/{0}/{1}.pdf",
                     ViewState["thn_usulan"].ToString(), idMitra.ToString());
-                
+
                 if (File.Exists(Server.MapPath(filePath)))
                 {
-                    string tmpFolderUnduh = "~/fileUpload/Mitra/"+ ViewState["thn_usulan"].ToString()+"/";
+                    string tmpFolderUnduh = "~/fileUpload/Mitra/" + ViewState["thn_usulan"].ToString() + "/";
                     var atributUnduh = new AtributUnduh
                     {
                         FolderUnduh = tmpFolderUnduh, //PATH_UNGGAH_BERKAS,
@@ -653,7 +653,7 @@ namespace simlitekkes.UserControls.Pengusul
             isiMitra(ViewState["id_usulan_kegiatan"].ToString());
             isiMitraPenelitianPerSkema();
             mvMitra.SetActiveView(vMitraPelaksanaPenelitian);
-        }        
+        }
 
         protected void lbTambahMitraCalonPengguna_Click(object sender, EventArgs e)
         {
@@ -917,7 +917,7 @@ namespace simlitekkes.UserControls.Pengusul
 
                 if (File.Exists(Server.MapPath(filePath)))
                 {
-                    string tmpFolderUnduh = "~/fileUpload/Mitra/"+ ViewState["thn_usulan"].ToString() + "/";
+                    string tmpFolderUnduh = "~/fileUpload/Mitra/" + ViewState["thn_usulan"].ToString() + "/";
                     var atributUnduh = new AtributUnduh
                     {
                         FolderUnduh = tmpFolderUnduh,//PATH_UNGGAH_BERKAS,
@@ -1178,7 +1178,7 @@ namespace simlitekkes.UserControls.Pengusul
                     Directory.CreateDirectory(Server.MapPath(dirFile));
                 }
 
-                ktUnggah.path2save = dirFile + "/"+ idMitra + ".pdf";
+                ktUnggah.path2save = dirFile + "/" + idMitra + ".pdf";
 
                 ktUnggah.max_size = 1024 * 1024; // 500KB
                 ktUnggah.alllowed_ext = "pdf;PDF";
@@ -1199,7 +1199,7 @@ namespace simlitekkes.UserControls.Pengusul
 
                 if (File.Exists(Server.MapPath(filePath)))
                 {
-                    string tmpFolderUnduh = "~/fileUpload/Mitra/"+ ViewState["thn_usulan"].ToString()+"/";
+                    string tmpFolderUnduh = "~/fileUpload/Mitra/" + ViewState["thn_usulan"].ToString() + "/";
                     var atributUnduh = new AtributUnduh
                     {
                         FolderUnduh = tmpFolderUnduh, //PATH_UNGGAH_BERKAS,
@@ -1475,8 +1475,5 @@ namespace simlitekkes.UserControls.Pengusul
             }
 
         }
-
-
-
     }
 }
