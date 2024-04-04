@@ -12,18 +12,10 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-
-
 using System.IO;
-
 using System.Data;
-//using simlitabmas.Core;
 using simlitekkes.UIControllers;
-
 using simlitekkes.Models.Sistem;
-
-
-
 
 namespace simlitekkes.UserControls.KepalaLembaga
 {
@@ -62,8 +54,38 @@ namespace simlitekkes.UserControls.KepalaLembaga
                     lbdesentralisasi.CssClass = "btn btn-outline-success";
                     lbPenugasan.CssClass = "btn btn-outline-secondary";
                 }
+                isiDdlThnUsulan();
+                isiDdlThnPelaksanaan();
                 isiRekap();
                 mvSinta.SetActiveView(vDaftar);
+            }
+        }
+
+        private void isiDdlThnUsulan()
+        {
+            ddlThnUsulan.Items.Clear();
+            ddlThnUsulan.Items.Add(new System.Web.UI.WebControls.ListItem("--Pilih--", "0000"));
+            int thnSKg = int.Parse(DateTime.Now.Year.ToString());
+            for (int i = thnSKg; i >= 2020; i--)
+            {
+                ddlThnUsulan.Items.Add(new System.Web.UI.WebControls.ListItem(i.ToString(), i.ToString()));
+            }
+        }
+
+        private void isiDdlThnPelaksanaan()
+        {
+            string thnUsulan = ddlThnUsulan.SelectedValue;
+            ddlThnPelaksanaan.Items.Clear();
+            if (int.Parse(thnUsulan) > 0)
+            {
+                for (int i = 1; i >= 0; i--)
+                {
+                    ddlThnPelaksanaan.Items.Add(new System.Web.UI.WebControls.ListItem((int.Parse(thnUsulan) + i).ToString(), (int.Parse(thnUsulan) + i).ToString()));
+                }
+            }
+            else
+            {
+                ddlThnPelaksanaan.Items.Add(new System.Web.UI.WebControls.ListItem("-- Pilih--", "0"));
             }
         }
 
@@ -120,7 +142,13 @@ namespace simlitekkes.UserControls.KepalaLembaga
             isiRekap();
         }
 
-        protected void ddlThn_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlThnUsulan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            isiDdlThnPelaksanaan();
+            isiRekap();
+        }
+
+        protected void ddlThnPelaksanaan_SelectedIndexChanged(object sender, EventArgs e)
         {
             isiRekap();
         }

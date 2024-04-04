@@ -37,22 +37,12 @@
                             <label class="form-control-label">Thn. Usulan&nbsp;&nbsp;</label>
                             <asp:DropDownList ID="ddlThnUsulan" AutoPostBack="true" runat="server" Enabled="true"
                                 ClientIDMode="Static" Width="100px" CssClass="form-control"
-                                OnSelectedIndexChanged="ddlThn_SelectedIndexChanged">
-                                <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
-                                <asp:ListItem Text="2021" Value="2021" ></asp:ListItem>
-                                <asp:ListItem Text="2020" Value="2020"></asp:ListItem>
-                                <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
-                                <asp:ListItem Text="2018" Value="2018"></asp:ListItem>
+                                OnSelectedIndexChanged="ddlThnUsulan_SelectedIndexChanged">
                             </asp:DropDownList>
                             <label class="form-control-label">Tahun Pelaksanaan&nbsp;&nbsp;</label>
                             <asp:DropDownList ID="ddlThnPelaksanaan" runat="server" AutoPostBack="True"
                                 CssClass="form-control input-sm"
-                                OnSelectedIndexChanged="ddlThn_SelectedIndexChanged">
-                                <asp:ListItem Text="2023" Value="2023"></asp:ListItem>
-                                <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
-                                <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
-                                <asp:ListItem Text="2020" Value="2020"></asp:ListItem>
-                                <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
+                                OnSelectedIndexChanged="ddlThnPelaksanaan_SelectedIndexChanged">
                             </asp:DropDownList>
                         </div>
                     </div>
