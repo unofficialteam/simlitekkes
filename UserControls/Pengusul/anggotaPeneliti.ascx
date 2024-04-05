@@ -21,9 +21,40 @@
 </div>
 <asp:MultiView ID="mvAnggota" runat="server" ActiveViewIndex="0">
     <asp:View ID="vDaftarAnggota" runat="server">
+
+
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>Identitas Ketua</h5>
+            </div>
+            <div class="card-body">
+                <div class="panel-body" style="padding: 20px;">
+                    <div class="row mb-2">
+                        <label class="col-md-2">Nama Ketua</label>
+                        <div class="col-md-10">
+                            <asp:Label ID="lblNamaKetua" runat="server" Text="-"></asp:Label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-md-2">Uraian tugas dalam penelitian</label>
+                        <div class="col-md-8">
+                            <asp:TextBox ID="tbBidangTugasKetua" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="2"></asp:TextBox>
+                        </div>
+                        <div class="col-md-2" style="text-align: right; padding: 10px 10px 10px 0px">
+                            <asp:LinkButton runat="server" ID="lbSimpanBidangTugasKetua" CssClass="btn btn-outline-success" OnClick="lbSimpanBidangTugasKetua_Click">Simpan</asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <div class="card mb-4">
             <div class="card-header">
                 <div class="d-flex justify-content-between align-items-center">
+
                     <div>
                         <h5>Identitas Pengusul - 
                 <asp:Label ID="lblStsAnggotaDikti2" runat="server" Text="0"></asp:Label>
