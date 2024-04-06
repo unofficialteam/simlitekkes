@@ -74,10 +74,11 @@ namespace simlitekkes.UserControls.Pengusul.report
 
             lblIdUsulanKegiatan.Text = pIdUsulanKegiatan;
             lblRencanaPelaksanaan.Text = dt.Rows[0]["rencana_pelaksanaan_penelitian"].ToString();
-            
+
             lblJudul.Text = dt.Rows[0]["judul"].ToString();
-            lblBidangFokus.Text = dt.Rows[0]["bidang"].ToString();
-            lblKategori.Text = dt.Rows[0]["program_hibah"].ToString();
+            lblBidangFokus.Text = dt.Rows[0]["nama_pilar_abdimas"].ToString();
+            lblKategori.Text = dt.Rows[0]["tema_pilar_abdimas"].ToString();
+            lblTopik.Text = dt.Rows[0]["topik_pilar_abdimas"].ToString();
             lblNamaSkema.Text = dt.Rows[0]["nama_skema"].ToString();
             lblLamaKegiatan.Text = dt.Rows[0]["lama_penelitian"].ToString();
             lblJmlMhs.Text = dt.Rows[0]["jml_mhs_terlibat"].ToString();

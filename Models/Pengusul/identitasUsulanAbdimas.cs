@@ -32,6 +32,50 @@ namespace simlitekkes.Models.Pengusul
 
         #region Methods
 
+        public bool getTopikUnggulanPenelitianPT(ref DataTable dataTable, Guid idBidangUnggulanPT)
+        {
+            bool isSuccess = false;
+
+            var query = $@"SELECT * FROM penelitian.list_topik_unggulan_perguruan_tinggi('{idBidangUnggulanPT}')
+                           WHERE kode_status_aktif = '1' ORDER BY topik_unggulan_perguruan_tinggi;";
+
+            dataTable = new DataTable();
+            isSuccess = this._db.FetchDataTable(query, ref dataTable);
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+            return isSuccess;
+        }
+
+        public bool getBidangUnggulanPenelitianPTByPilar(ref DataTable dataTable,
+            Guid idInstitusi, int idPilarTransformasi)
+        {
+            bool isSuccess = false;
+
+            var query = $@"SELECT * FROM penelitian.list_bidang_unggulan_perguruan_tinggi('{idInstitusi}')
+                            WHERE kode_status_aktif = '1' 
+                            AND id_pilar_transformasi = {idPilarTransformasi}
+                            ORDER BY bidang_unggulan_perguruan_tinggi;";
+
+            dataTable = new DataTable();
+            isSuccess = this._db.FetchDataTable(query, ref dataTable);
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+            return isSuccess;
+        }
+
+        public bool getPilarTransformasi(ref DataTable dataTable)
+        {
+            bool isSuccess = false;
+
+            var query = $@"SELECT * FROM referensi.list_pilar_transformasi();";
+
+            dataTable = new DataTable();
+            isSuccess = this._db.FetchDataTable(query, ref dataTable);
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+            return isSuccess;
+        }
+
         public bool getIdentitasUsulan(ref DataTable dataTable, string idPersonal, string thnUsulan,
             string thnPelaksanaan)
         {
