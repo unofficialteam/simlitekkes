@@ -52,7 +52,8 @@ namespace simlitekkes.UserControls.Pengusul
 
         public void InitIdentitasUsulan(string thn_usulan, string thn_pelaksanaan, Guid idUsulanKegiatan = default(Guid))
         {
-            isiddlBidangUnggulanPT();
+            isiddlPilarTransformasi();
+            //isiddlBidangUnggulanPT();
 
             ViewState["thn_usulan"] = thn_usulan;
             ViewState["thn_pelaksanaan"] = thn_pelaksanaan;
@@ -88,16 +89,20 @@ namespace simlitekkes.UserControls.Pengusul
                     isiddlBidangFokus();
                     setValueDropDownList(ref ddlBidangFokus, dt.Rows[0]["id_bidang_fokus"].ToString());
 
-                    if (rblKategoriPengabdian.SelectedValue == "7")
-                    {
-                        panelTopikUnggulanPT.Visible = true;
+                    //if (rblKategoriPengabdian.SelectedValue == "7")
+                    //{
+                    panelTopikUnggulanPT.Visible = true;
 
-                        isiddlBidangUnggulanPT();
-                        setValueDropDownList(ref ddlBidangUnggulanPT, dt.Rows[0]["id_bidang_unggulan_perguruan_tinggi"].ToString());
+                    isiddlPilarTransformasi();
+                    setValueDropDownList(ref ddlPilarTransformasi, dt.Rows[0]["id_pilar_transformasi"].ToString());
 
-                        isiddlTopikUnggulanPT();
-                        setValueDropDownList(ref ddlTopikUnggulanPT, dt.Rows[0]["id_topik_unggulan_perguruan_tinggi"].ToString());
-                    }
+                    //isiddlBidangUnggulanPT();
+                    isiddlBidangUnggulanPTByPilar();
+                    setValueDropDownList(ref ddlBidangUnggulanPT, dt.Rows[0]["id_bidang_unggulan_perguruan_tinggi"].ToString());
+
+                    isiddlTopikUnggulanPT();
+                    setValueDropDownList(ref ddlTopikUnggulanPT, dt.Rows[0]["id_topik_unggulan_perguruan_tinggi"].ToString());
+                    //}
                 }
 
                 modeEdit(true);
@@ -227,11 +232,11 @@ namespace simlitekkes.UserControls.Pengusul
             var dt = new DataTable();
             var objLogin = (Models.login)Session["objLogin"];
 
-            if (modelIdentitas.getTopikUnggulanPengabdianPT(ref dt, Guid.Parse(ddlBidangUnggulanPT.SelectedValue)))
+            if (modelIdentitas.getTopikUnggulanPenelitianPT(ref dt, Guid.Parse(ddlBidangUnggulanPT.SelectedValue)))
             {
                 ddlTopikUnggulanPT.AppendDataBoundItems = true;
                 ddlTopikUnggulanPT.Items.Clear();
-                ddlTopikUnggulanPT.Items.Add(new ListItem { Text = "-- Pilih Topik Unggulan PT --", Value = "-1", Selected = true });
+                ddlTopikUnggulanPT.Items.Add(new ListItem { Text = "-- Pilih Topik Pilar Transformasi --", Value = "-1", Selected = true });
                 ddlTopikUnggulanPT.DataSource = dt;
                 ddlTopikUnggulanPT.DataBind();
             }
@@ -375,7 +380,7 @@ namespace simlitekkes.UserControls.Pengusul
             }
 
             //Perguruan Tinggi
-            if (rblKategoriPengabdian.SelectedValue == "7" && ddlTopikUnggulanPT.SelectedValue == "-1") invalidData.Add("Bidang Unggulan PT");
+            if (rblKategoriPengabdian.SelectedValue == "7" && ddlTopikUnggulanPT.SelectedValue == "-1") invalidData.Add("Pilar Transformasi");
 
             if (invalidData.Count > 0)
             {
@@ -384,8 +389,8 @@ namespace simlitekkes.UserControls.Pengusul
                 return false;
             }
 
-            Guid? idTopikUnggulanPT = (rblKategoriPengabdian.SelectedValue == "7") ?
-                Guid.Parse(ddlTopikUnggulanPT.SelectedValue) : default(Guid?);
+            //Guid? idTopikUnggulanPT = (rblKategoriPengabdian.SelectedValue == "7") ?
+            //    Guid.Parse(ddlTopikUnggulanPT.SelectedValue) : default(Guid?);
 
             if (modelIdentitas.insertDataBaru(
                     IdUsulan,
@@ -398,7 +403,7 @@ namespace simlitekkes.UserControls.Pengusul
                     ViewState["thn_usulan"].ToString(),
                     ViewState["thn_pelaksanaan"].ToString(),
                     Guid.Parse(objLogin.idPersonal.ToString()),
-                    idTopikUnggulanPT,
+                    Guid.Parse(ddlTopikUnggulanPT.SelectedValue), //idTopikUnggulanPT,
                     int.Parse(tbJumlahMhs.Text)
                 ))
             {
@@ -416,7 +421,7 @@ namespace simlitekkes.UserControls.Pengusul
         protected void rblKategoriPengabdian_SelectedIndexChanged(object sender, EventArgs e)
         {
             isiddlSkemaKegiatan();
-            panelTopikUnggulanPT.Visible = (rblKategoriPengabdian.SelectedValue == "7") ? true : false;
+            //panelTopikUnggulanPT.Visible = (rblKategoriPengabdian.SelectedValue == "7") ? true : false;
         }
 
         protected void ddlSkemaPenelitian_SelectedIndexChanged(object sender, EventArgs e)
@@ -441,6 +446,43 @@ namespace simlitekkes.UserControls.Pengusul
         protected void ddlBidangUnggulanPT_SelectedIndexChanged(object sender, EventArgs e)
         {
             isiddlTopikUnggulanPT();
+        }
+
+        private void isiddlPilarTransformasi()
+        {
+            var dt = new DataTable();
+            var objLogin = (Models.login)Session["objLogin"];
+
+            if (modelIdentitas.getPilarTransformasi(ref dt))
+            {
+                ddlPilarTransformasi.AppendDataBoundItems = true;
+                ddlPilarTransformasi.Items.Clear();
+                ddlPilarTransformasi.Items.Add(new ListItem { Text = "-- Pilih Pilar Transformasi --", Value = "0", Selected = true });
+                ddlPilarTransformasi.DataSource = dt;
+                ddlPilarTransformasi.DataBind();
+            }
+        }
+
+        protected void ddlPilarTransformasi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            isiddlBidangUnggulanPTByPilar();
+            isiddlTopikUnggulanPT();
+        }
+
+        private void isiddlBidangUnggulanPTByPilar()
+        {
+            var dt = new DataTable();
+            var objLogin = (Models.login)Session["objLogin"];
+
+            if (modelIdentitas.getBidangUnggulanPenelitianPTByPilar(ref dt,
+                Guid.Parse(objLogin.idInstitusi.ToString()), int.Parse(ddlPilarTransformasi.SelectedValue)))
+            {
+                ddlBidangUnggulanPT.AppendDataBoundItems = true;
+                ddlBidangUnggulanPT.Items.Clear();
+                ddlBidangUnggulanPT.Items.Add(new ListItem { Text = "-- Pilih Tema Pilar Transformasi --", Value = "00000000-0000-0000-0000-000000000000", Selected = true });
+                ddlBidangUnggulanPT.DataSource = dt;
+                ddlBidangUnggulanPT.DataBind();
+            }
         }
     }
 }

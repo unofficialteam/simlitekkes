@@ -38,29 +38,6 @@
                                 </asp:DropDownList>
                             </div>
                         </div>
-                        <asp:Panel ID="panelTopikUnggulanPT" runat="server" Visible="false">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label form-control-label">Bidang Unggulan PT</label>
-                                <div class="col-sm-10 col-xs-12">
-                                    <asp:DropDownList ID="ddlBidangUnggulanPT" runat="server" CssClass="form-control"
-                                        DataTextField="bidang_unggulan_perguruan_tinggi"
-                                        DataValueField="id_bidang_unggulan_perguruan_tinggi" AutoPostBack="true"
-                                        OnSelectedIndexChanged="ddlBidangUnggulanPT_SelectedIndexChanged">
-                                        <asp:ListItem Text="-- Pilih Bidang Unggulan PT --" Value="-1" Selected="True"></asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label form-control-label">Topik Unggulan PT</label>
-                                <div class="col-sm-10 col-xs-12">
-                                    <asp:DropDownList ID="ddlTopikUnggulanPT" runat="server" CssClass="form-control"
-                                        DataTextField="topik_unggulan_perguruan_tinggi"
-                                        DataValueField="id_topik_unggulan_perguruan_tinggi">
-                                        <asp:ListItem Text="-- Pilih Topik Unggulan PT --" Value="-1" Selected="True"></asp:ListItem>
-                                    </asp:DropDownList>
-                                </div>
-                            </div>
-                        </asp:Panel>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label form-control-label">Bidang Pengabdian</label>
                             <div class="col-sm-10">
@@ -70,6 +47,41 @@
                                 </asp:DropDownList>
                             </div>
                         </div>
+                        <hr />
+                        <asp:Panel ID="panelTopikUnggulanPT" runat="server" Visible="true">
+                            <div class="form-group row">
+                                <label for="3" class="col-sm-2">Pilar Transformasi</label>
+                                <div class="col-sm-10">
+                                    <asp:DropDownList ID="ddlPilarTransformasi" runat="server" CssClass="form-control"
+                                        DataTextField="nama_pilar_transformasi"
+                                        DataValueField="id_pilar_transformasi" AutoPostBack="true"
+                                        OnSelectedIndexChanged="ddlPilarTransformasi_SelectedIndexChanged">
+                                        <asp:ListItem Text="-- Pilih Pilar Transformasi --" Value="0" Selected="True"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label form-control-label"></label>
+                                <div class="col-sm-10 col-xs-12">
+                                    <asp:DropDownList ID="ddlBidangUnggulanPT" runat="server" CssClass="form-control"
+                                        DataTextField="bidang_unggulan_perguruan_tinggi"
+                                        DataValueField="id_bidang_unggulan_perguruan_tinggi" AutoPostBack="true"
+                                        OnSelectedIndexChanged="ddlBidangUnggulanPT_SelectedIndexChanged">
+                                        <asp:ListItem Text="-- Pilih Tema Pilar Transformasi --" Value="-1" Selected="True"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label form-control-label"></label>
+                                <div class="col-sm-10 col-xs-12">
+                                    <asp:DropDownList ID="ddlTopikUnggulanPT" runat="server" CssClass="form-control"
+                                        DataTextField="topik_unggulan_perguruan_tinggi"
+                                        DataValueField="id_topik_unggulan_perguruan_tinggi">
+                                        <asp:ListItem Text="-- Pilih Topik Pilar Transformasi --" Value="-1" Selected="True"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                        </asp:Panel>
                         <%--<div class="form-group">
                                 <label class="col-sm-2 col-form-label form-control-label">Tahun Pelaksanaan</label>
                                 <div class="col-sm-2">
