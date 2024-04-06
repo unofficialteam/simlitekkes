@@ -25,7 +25,7 @@ namespace simlitekkes.UserControls.Pengusul
         protected void Page_Load(object sender, EventArgs e)
         {
             objLogin = (Models.login)Session["objLogin"];
-
+            lblNamaKetua.Text = objLogin.namaLengkap;
             if (!IsPostBack)
             {
                 //isiAnggotaDikti(idUsulanKegiatan, idSkema);                
@@ -831,6 +831,20 @@ namespace simlitekkes.UserControls.Pengusul
                 isiAnggotaBaruDikti();
                 noty.Notify(this.Page, uiNotify.NotifyType.success, "Informasi",
                    "Data Personil berhasil dihapus...");
+            }
+            else
+            {
+                noty.Notify(this.Page, uiNotify.NotifyType.error, "Terjadi Kesalahan",
+                   objAnggota.errorMessage);
+            }
+        }
+
+        protected void lbSimpanBidangTugasKetua_Click(object sender, EventArgs e)
+        {
+            if (objAnggota.updateBidangTugasKetua(ViewState["id_usulan_kegiatan"].ToString(), tbBidangTugasKetua.Text))
+            {
+                noty.Notify(this.Page, uiNotify.NotifyType.success, "Informasi",
+                   "Update bidang tugas ketua berhasil.");
             }
             else
             {

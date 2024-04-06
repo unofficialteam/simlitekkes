@@ -108,7 +108,7 @@ namespace simlitekkes.UserControls.Pengusul
             {
                 //case "3": //PDUPT
                 //case "5": //PKPT
-                //case "7": //PDP
+                case "72": //KRU PT
                 case "1": //PTUPT
                 case "71": //PPUPT
                 case "75": //PP
@@ -1256,6 +1256,7 @@ namespace simlitekkes.UserControls.Pengusul
                     break;
 
                 case "71": //PPUPT
+                case "72": //KRUPT
                     if (File.Exists(Server.MapPath(pathPengambangan)))
                     {
                         Response.Redirect(pathPengambangan);

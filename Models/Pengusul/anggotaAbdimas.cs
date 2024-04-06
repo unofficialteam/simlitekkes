@@ -337,6 +337,21 @@ namespace simlitekkes.Models.Pengusul
             return isSuccess;
         }
 
+        public bool updateBidangTugasKetua(string p_id_usulan_kegiatan, string p_bidang_tugas)
+        {
+            bool isSuccess = false;
+
+            string strSQL = @"select * FROM hibah.update_bidang_tugas_ketua(@p_bidang_tugas::text, @p_id_usulan_kegiatan::uuid);";
+
+            isSuccess = this._db.ExecuteNonQuery(strSQL
+                    , new Npgsql.NpgsqlParameter("@p_bidang_tugas", p_bidang_tugas)
+                    , new Npgsql.NpgsqlParameter("@p_id_usulan_kegiatan", p_id_usulan_kegiatan));
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+
+            return isSuccess;
+        }
+
         #endregion
     }
 }
