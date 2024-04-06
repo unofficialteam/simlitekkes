@@ -52,7 +52,7 @@ table, td, th{
 </head>
 <body>
     <form id="form1" runat="server" style="margin-left: 70px; margin-right: 50px;">
-        <div>            
+        <div>
             <table width="100%" style="font-size: 13px; font-family: 'Calibri (Body)';">
                 <tr>
                     <td>
@@ -117,13 +117,15 @@ table, td, th{
         <table width="100%" class="trtd">
 
             <tr align="center" class="trtd">
-                <td width="120px" class="trtd">Bidang Fokus
+                <td width="120px" class="trtd">Pilar Transformasi
                 </td>
-                <td width="160px" class="trtd">Kategori (Kompetitif Nasional/ Desentralisasi/ Penugasan)
+                <td width="100px" class="trtd">Tema
+                </td>
+                <td width="160px" class="trtd">Topik
                 </td>
                 <td width="100px" class="trtd">Skema
                 </td>
-                <td width="50px" class="trtd">Lama Kegiatan (Tahun),<br />
+                <td width="100px" class="trtd">Lama Kegiatan (Tahun),<br />
                     Jumlah keterlibatan<br />
                     mahasiswa (Orang)
                 </td>
@@ -136,12 +138,16 @@ table, td, th{
                     <asp:Label runat="server" ID="lblKategori"></asp:Label>
                 </td>
                 <td class="trtd">
+                    <asp:Label runat="server" ID="lblTopik"></asp:Label>
+                </td>
+                <td class="trtd">
                     <asp:Label runat="server" ID="lblNamaSkema"></asp:Label>
                 </td>
                 <td class="trtd">
                     <asp:Label runat="server" ID="lblLamaKegiatan"></asp:Label>
-                    <br />
+                    Tahun<br />
                     <asp:Label runat="server" ID="lblJmlMhs"></asp:Label>
+                    Orang
                 </td>
             </tr>
         </table>
@@ -464,8 +470,8 @@ table, td, th{
             </asp:Repeater>
         </table>
 
-        <uc:pdfRab runat="server" ID="pdfRab" Visible="false"></uc:pdfRab>
-        <uc:pdfRab2019 runat="server" ID="pdfRab2019" Visible="true"></uc:pdfRab2019>
+        <uc:pdfrab runat="server" id="pdfRab" visible="false"></uc:pdfrab>
+        <uc:pdfrab2019 runat="server" id="pdfRab2019" visible="true"></uc:pdfrab2019>
         <%--<uc:pdfBioData runat="server" ID="pdfBioData" ></uc:pdfBioData>--%>
     </form>
 

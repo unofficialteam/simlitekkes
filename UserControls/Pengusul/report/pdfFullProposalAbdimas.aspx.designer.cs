@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace simlitekkes.UserControls.Pengusul.report {
-    
-    
-    public partial class pdfFullProposalAbdimas {
-        
+namespace simlitekkes.UserControls.Pengusul.report
+{
+
+
+    public partial class pdfFullProposalAbdimas
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// imgKop control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgKop;
-        
+
         /// <summary>
         /// lblJudulBlock control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblJudulBlock;
-        
+
         /// <summary>
         /// lblIdUsulanKegiatan control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblIdUsulanKegiatan;
-        
+
         /// <summary>
         /// lblRencanaPelaksanaan control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRencanaPelaksanaan;
-        
+
         /// <summary>
         /// lblJudul control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblJudul;
-        
+
         /// <summary>
         /// lblBidangFokus control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBidangFokus;
-        
+
         /// <summary>
         /// lblKategori control.
         /// </summary>
@@ -83,7 +85,16 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblKategori;
-        
+
+        /// <summary>
+        /// lblTopik control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTopik;
+
         /// <summary>
         /// lblNamaSkema control.
         /// </summary>
@@ -92,7 +103,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblNamaSkema;
-        
+
         /// <summary>
         /// lblLamaKegiatan control.
         /// </summary>
@@ -101,7 +112,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLamaKegiatan;
-        
+
         /// <summary>
         /// lblJmlMhs control.
         /// </summary>
@@ -110,7 +121,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblJmlMhs;
-        
+
         /// <summary>
         /// rptAnggota control.
         /// </summary>
@@ -119,7 +130,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptAnggota;
-        
+
         /// <summary>
         /// rptMitra control.
         /// </summary>
@@ -128,7 +139,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptMitra;
-        
+
         /// <summary>
         /// rptMitraSasaranPPDM control.
         /// </summary>
@@ -137,7 +148,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptMitraSasaranPPDM;
-        
+
         /// <summary>
         /// rptMitraSasaranPpmUpt control.
         /// </summary>
@@ -146,7 +157,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptMitraSasaranPpmUpt;
-        
+
         /// <summary>
         /// rptLuaranWajib control.
         /// </summary>
@@ -155,7 +166,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptLuaranWajib;
-        
+
         /// <summary>
         /// rptLuaranTambahan control.
         /// </summary>
@@ -164,7 +175,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptLuaranTambahan;
-        
+
         /// <summary>
         /// pdfRab control.
         /// </summary>
@@ -173,7 +184,7 @@ namespace simlitekkes.UserControls.Pengusul.report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::simlitekkes.UserControls.Pengusul.report.pdfRab pdfRab;
-        
+
         /// <summary>
         /// pdfRab2019 control.
         /// </summary>
