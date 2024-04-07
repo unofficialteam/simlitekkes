@@ -23,7 +23,7 @@
                                     RepeatLayout="Flow" AutoPostBack="true"
                                     OnSelectedIndexChanged="rblKategoriPengabdian_SelectedIndexChanged">
                                     <asp:ListItem Text="Unggulan Nasional" Value="3" class="radio-inline mr-2" Selected="True"></asp:ListItem>
-                                    <asp:ListItem Text="Perguruan Tinggi" Value="7" class="radio-inline"></asp:ListItem>
+                                    <asp:ListItem Text="Poltekkes Kemenkes" Value="7" class="radio-inline"></asp:ListItem>
                                     <%--<asp:ListItem Text="Penugasan" Value="8" class="radio-inline"></asp:ListItem>--%>
                                 </asp:RadioButtonList>
                             </div>
