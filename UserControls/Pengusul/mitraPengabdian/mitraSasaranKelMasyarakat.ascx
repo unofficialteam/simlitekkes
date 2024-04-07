@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="col-md-12" style="padding-left: 15px;">
-                <h5 class="card-header-text" style="color: red;">KONTRIBUSI PENDANAAN (JIka ada)</h5>
+                <h5 class="card-header-text" style="color: red;">KONTRIBUSI PENDANAAN (Jika ada)</h5>
             </div>
             <div class="col-md-12">
                 <div class="form-group row">

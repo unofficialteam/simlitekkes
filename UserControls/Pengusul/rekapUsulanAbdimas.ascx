@@ -458,9 +458,9 @@
                                             <td style="vertical-align: top;">
                                                 <div style="margin-left: 50px;">
                                                     Dana pertahun:<br />
-                                                    &nbsp;- Minimal: Rp.
-                                                    <asp:Label runat="server" ID="lblDanaMinimal" />
-                                                    &nbsp;- Maksimal: Rp.
+                                                    <%--&nbsp;- Minimal: Rp.--%>
+                                                    <asp:Label runat="server" ID="lblDanaMinimal" Visible="false" />
+                                                    Maksimal: Rp.
                                                     <asp:Label runat="server" ID="lblDanaMaksimal" />
                                                 </div>
                                                 <%--<div style="margin-left: 50px;">
