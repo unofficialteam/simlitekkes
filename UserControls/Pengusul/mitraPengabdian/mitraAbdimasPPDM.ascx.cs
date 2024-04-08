@@ -22,7 +22,11 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
         kontrolUnggah ktUnggah = new kontrolUnggah();
         uiModal uiMdl = new uiModal();
         manipulasiData objManipData = new manipulasiData();
-        public event EventHandler OnChildEventOccurs;
+        //public event EventHandler OnChildEventOccurs;
+
+        public event EventHandler OnChildEventMitra;
+        public event EventHandler OnChildEventMitraEnd;        
+
         const int ID_TIPE_PELAKSANA_PT = 1;
 
         //const int ID_TIPE_PELAKSANA_PT = 1;
@@ -188,6 +192,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
             ViewState["id_usulan_kegiatan"].ToString();
             ViewState["IsTipeMono"] = true;
             mvMitra.SetActiveView(vEditPemda);
+            if (OnChildEventMitra != null)
+                OnChildEventMitra(sender, null);
         }
 
         protected void lbKelMasyarakat_Click(object sender, EventArgs e)
@@ -208,22 +214,30 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
         {
             if (mitraPelaksanaPT.Simpan()) mvMitra.SetActiveView(vDaftarMitra);
             isigvMitraPelaksanaPT();
+            if (OnChildEventMitraEnd != null)
+                OnChildEventMitraEnd(sender, null);
         }
 
         protected void lbBatalEditPT_Click(object sender, EventArgs e)
         {
             mvMitra.SetActiveView(vDaftarMitra);
+            if (OnChildEventMitraEnd != null)
+                OnChildEventMitraEnd(sender, null);
         }
 
         protected void lbSimpanEditPemdaKota_Click(object sender, EventArgs e)
         {
             if (mitraPelaksanaPemdaKota.Simpan()) mvMitra.SetActiveView(vDaftarMitra);
             isigvMitraPelaksanaPemdaKota();
+            if (OnChildEventMitraEnd != null)
+                OnChildEventMitraEnd(sender, null);
         }
 
         protected void lbBatalEditPemdaKota_Click(object sender, EventArgs e)
         {
             mvMitra.SetActiveView(vDaftarMitra);
+            if (OnChildEventMitraEnd != null)
+                OnChildEventMitraEnd(sender, null);
         }
 
         protected void lbSimpanEditKelMasyarakat_Click(object sender, EventArgs e)
@@ -241,6 +255,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
                     isigvMitraPelaksanaPT();
                     isigvMitraPelaksanaPemdaKota();
                     isigvKelMasyarakat();
+                    if (OnChildEventMitraEnd != null)
+                        OnChildEventMitraEnd(sender, null);
                 }
             }
         }
@@ -248,6 +264,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
         protected void lbBatalEditPemdaKelMasyarakat_Click(object sender, EventArgs e)
         {
             mvMitra.SetActiveView(vDaftarMitra);
+            if (OnChildEventMitraEnd != null)
+                OnChildEventMitraEnd(sender, null);
         }
 
         protected void gvMitraPelaksanaPengabdian_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -255,6 +273,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
             Guid id_mitra_abdimas = Guid.Parse(gvMitraPelaksanaPengabdian.DataKeys[e.RowIndex]["IdMitraAbdimas"].ToString());
             mitraPelaksanaPT.InitData(Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), id_mitra_abdimas);
             mvMitra.SetActiveView(vEditPT);
+            if (OnChildEventMitra != null)
+                OnChildEventMitra(sender, null);
         }
 
         protected void gvMitraPelaksanaPengabdian_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -330,6 +350,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
             //mitraPelaksanaPemdaKota.InitData(Guid.Parse(ViewState["id_usulan_kegiatan"].ToString()), id_mitra_abdimas);
             ViewState["IsTipeMono"] = true;
             mvMitra.SetActiveView(vEditPemda);
+            if (OnChildEventMitra != null)
+                OnChildEventMitra(sender, null);
         }
 
         protected void gvMitraPelaksanaPemdaKota_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -532,7 +554,7 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
                 if (e.CommandName == "unduhDokumenMitraSasaran")
                 {
                     idMitra = Guid.Parse(gvKelMasyarakat.DataKeys[rowIndex]["id_mitra_abdimas"].ToString());
-                    namaMitra = gvKelMasyarakat.DataKeys[rowIndex]["NamaUMKM"].ToString();
+                    namaMitra = gvKelMasyarakat.DataKeys[rowIndex]["nama_pimpinan_mitra"].ToString();
                 }
                 else if (e.CommandName == "unduh11")
                 {
@@ -624,6 +646,8 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
 
             mvMitra.SetActiveView(vEditKelMasyarakat);
 
+            if (OnChildEventMitra != null)
+                OnChildEventMitra(sender, null);
         }
     }
 }

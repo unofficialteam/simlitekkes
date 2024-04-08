@@ -2,14 +2,14 @@
 
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPKM.ascx" TagPrefix="uc" TagName="mitraAbdimasPKM" %>
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPK.ascx" TagPrefix="uc" TagName="mitraAbdimasPPK" %>
-<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPUPIK.ascx" TagPrefix="uc" TagName="mitraPPUPIK" %>
+<%--<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPUPIK.ascx" TagPrefix="uc" TagName="mitraPPUPIK" %>--%>
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPKW.ascx" TagPrefix="uc" TagName="mitraPKW" %>
-<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasKKNPPM.ascx" TagPrefix="uc" TagName="mitraKKNPPM" %>
-<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPKMS.ascx" TagPrefix="uc" TagName="mitraPKMS" %>
-<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPPUD.ascx" TagPrefix="uc" TagName="mitraPPPUD" %>
+<%--<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasKKNPPM.ascx" TagPrefix="uc" TagName="mitraKKNPPM" %>--%>
+<%--<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPKMS.ascx" TagPrefix="uc" TagName="mitraPKMS" %>--%>
+<%--<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPPUD.ascx" TagPrefix="uc" TagName="mitraPPPUD" %>--%>
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPDM.ascx" TagPrefix="uc" TagName="mitraPPDM" %>
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPDS.ascx" TagPrefix="uc" TagName="mitraPPDS" %>
-<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPMUPT.ascx" TagPrefix="uc" TagName="mitraAbdimasPPMUPT" %>
+<%--<%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraAbdimasPPMUPT.ascx" TagPrefix="uc" TagName="mitraAbdimasPPMUPT" %>--%>
 <%@ Register Src="~/UserControls/Pengusul/mitraPengabdian/mitraPelaksanaPPDS.ascx" TagPrefix="uc" TagName="mitraPelaksanaPPDS" %>
 
 <asp:MultiView ID="mvMitra" runat="server">

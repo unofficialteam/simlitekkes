@@ -22,12 +22,24 @@ namespace simlitekkes.UserControls.Pengusul
         kontrolUnggah ktUnggah = new kontrolUnggah();
         uiModal uiMdl = new uiModal();
         manipulasiData objManipData = new manipulasiData();
-        public event EventHandler OnChildEventMitra;
-        public event EventHandler OnChildEventMitraEnd;
+        public event EventHandler OnChildSubEventMitra;
+        public event EventHandler OnChildSubEventMitraEnd;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ucPPDM.OnChildEventMitra += new EventHandler(OnChildEventMitra);
+            ucPPDM.OnChildEventMitraEnd += new EventHandler(OnChildEventMitraEnd);
+        }
 
+        void OnChildEventMitra(object sender, EventArgs e)
+        {
+            if (OnChildSubEventMitra != null)
+                OnChildSubEventMitra(sender, null);
+        }
+        void OnChildEventMitraEnd(object sender, EventArgs e)
+        {
+            if (OnChildSubEventMitraEnd != null)
+                OnChildSubEventMitraEnd(sender, null);
         }
 
         public void InitMitra(usulanKegiatan usulanKegiatan)
