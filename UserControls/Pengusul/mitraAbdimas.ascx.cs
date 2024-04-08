@@ -21,7 +21,9 @@ namespace simlitekkes.UserControls.Pengusul
         uiNotify noty = new uiNotify();
         kontrolUnggah ktUnggah = new kontrolUnggah();
         uiModal uiMdl = new uiModal();
-        manipulasiData objManipData = new manipulasiData();  
+        manipulasiData objManipData = new manipulasiData();
+        public event EventHandler OnChildEventMitra;
+        public event EventHandler OnChildEventMitraEnd;
 
         protected void Page_Load(object sender, EventArgs e)
         {

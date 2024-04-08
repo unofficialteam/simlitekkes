@@ -387,6 +387,9 @@ namespace simlitekkes.UserControls.Pengusul
             isiAnggotaBaruDikti();
             clearDataDosen();
             tbCari.Text = string.Empty;
+
+            if (OnChildBatalEventOccurs != null)
+                OnChildBatalEventOccurs(sender, null);
         }
 
 

@@ -41,6 +41,13 @@ namespace simlitekkes.UserControls.Pengusul
 
             ktAnggota.OnChildEventOccurs += new EventHandler(Anggota_OnChildEventOccurs);
             ktAnggota.OnChildBatalEventOccurs += new EventHandler(AnggotaBatal_OnChildEventOccurs);
+
+            mitraAbdimas.OnChildEventMitra += new EventHandler(MitraChildEvent);
+            mitraAbdimas.OnChildEventMitraEnd += new EventHandler(AnggotaBatal_OnChildEventOccurs);
+            //public event EventHandler OnChildEventMitra;
+            //public event EventHandler OnChildEventMitraEnd;
+
+
         }
 
         private void init()
@@ -127,7 +134,10 @@ namespace simlitekkes.UserControls.Pengusul
         {
             lbLanjutkanAtAnggota.Visible = true;
         }
-
+        void MitraChildEvent(object sender, EventArgs e)
+        {
+            lbLanjutkanAtAnggota.Visible = false;
+        }   
         private void cekStatusKirimUsulan(string pIdUsulanKegiatan)
         {
             DataTable dt = new DataTable();
