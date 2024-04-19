@@ -50,7 +50,7 @@
                             <label class="form-control-label">Tahun Pelaksanaan&nbsp;&nbsp;</label>
                             <asp:DropDownList ID="ddlThnPelaksanaan" runat="server" AutoPostBack="True"
                                 CssClass="form-control input-sm"
-                                OnSelectedIndexChanged="ddlThn_SelectedIndexChanged">
+                                OnSelectedIndexChanged="ddlThnPelaksanaan_SelectedIndexChanged">
                                 <asp:ListItem Text="2023" Value="2023"></asp:ListItem>
                                 <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
                                 <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
