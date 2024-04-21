@@ -83,11 +83,17 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
         {
             string thnUsulan = ddlThnUsulan.SelectedValue;
             ddlThnPelaksanaan.Items.Clear();
-            for (int i = 1; i >= -1; i--)
+            if (int.Parse(thnUsulan) > 0)
             {
-                ddlThnPelaksanaan.Items.Add(new ListItem((int.Parse(thnUsulan) + i).ToString(), (int.Parse(thnUsulan) + i).ToString()));
+                for (int i = 1; i >= 0; i--)
+                {
+                    ddlThnPelaksanaan.Items.Add(new System.Web.UI.WebControls.ListItem((int.Parse(thnUsulan) + i).ToString(), (int.Parse(thnUsulan) + i).ToString()));
+                }
             }
-            ddlThnPelaksanaan.SelectedIndex = 0;
+            else
+            {
+                ddlThnPelaksanaan.Items.Add(new System.Web.UI.WebControls.ListItem("-- Pilih--", "0"));
+            }
         }
 
         private void isiGvRekapSkema()
@@ -139,6 +145,7 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
 
         protected void ddlTahunUsulan_SelectedIndexChanged(object sender, EventArgs e)
         {
+            isiDdlThnPelaksanaan();
             isiGvRekapSkema();
         }
 
