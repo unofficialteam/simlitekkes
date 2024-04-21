@@ -43,9 +43,9 @@
                                                 <asp:Label ID="lblBidangFokusJudul" runat="server" Text=" bidang fokus"></asp:Label>:&nbsp;
                                             <asp:Label runat="server" ID="lblBidFokus"></asp:Label>
                                                 &nbsp;<br />
-                                                - Minimal: Rp.
-                                            <asp:Label runat="server" ID="lblDanaMinimal" />
-                                                &nbsp; - Maksimal: Rp.
+                                                <%--- Minimal: Rp.--%>
+                                            <asp:Label runat="server" ID="lblDanaMinimal" Visible="false" />
+                                                Maksimal: Rp.
                                             <asp:Label runat="server" ID="lblDanaMaksimal" />
                                             </div>
                                         </td>

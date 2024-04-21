@@ -3745,6 +3745,7 @@
     <Content Include="UserControls\OperatorPenelitianPusdik\beranda.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\daftarReviewer.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\eksepsiPengusul.ascx" />
+    <Content Include="UserControls\OperatorPenelitianPusdik\formDataPendukungPT.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\luaranTambahanDidanai.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\menu.ascx" />
     <Content Include="UserControls\OperatorPenelitianPusdik\monitoringHasilReview.ascx" />
@@ -4481,6 +4482,13 @@
     </Compile>
     <Compile Include="UserControls\OperatorPenelitianPusdik\eksepsiPengusul.ascx.designer.cs">
       <DependentUpon>eksepsiPengusul.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperatorPenelitianPusdik\formDataPendukungPT.ascx.cs">
+      <DependentUpon>formDataPendukungPT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperatorPenelitianPusdik\formDataPendukungPT.ascx.designer.cs">
+      <DependentUpon>formDataPendukungPT.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OperatorPenelitianPusdik\luaranTambahanDidanai.ascx.cs">
       <DependentUpon>luaranTambahanDidanai.ascx</DependentUpon>
