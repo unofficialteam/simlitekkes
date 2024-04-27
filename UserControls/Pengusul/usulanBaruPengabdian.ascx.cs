@@ -480,7 +480,7 @@ namespace simlitekkes.UserControls.Pengusul
         {
             int thnSkg = int.Parse(DateTime.Now.Year.ToString());
             ddlThnUsulan.Items.Clear();
-            int maxThn = thnSkg + 1;
+            int maxThn = thnSkg;
             int minThn = 2018;
             //ddlThnPelaksanaanKegiatan.Items.Add(new ListItem("-- Pilih --",""));
             for (int a = maxThn; a >= minThn; a--)
