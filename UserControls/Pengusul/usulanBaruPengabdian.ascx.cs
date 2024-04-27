@@ -482,7 +482,6 @@ namespace simlitekkes.UserControls.Pengusul
             ddlThnUsulan.Items.Clear();
             int maxThn = thnSkg;
             int minThn = 2018;
-            //ddlThnPelaksanaanKegiatan.Items.Add(new ListItem("-- Pilih --",""));
             for (int a = maxThn; a >= minThn; a--)
             {
                 ddlThnUsulan.Items.Add(new ListItem(a.ToString(), a.ToString()));
