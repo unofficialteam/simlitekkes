@@ -530,6 +530,17 @@ namespace simlitekkes.UserControls.OperatorPT
                             generateToken();
                         }
                     }
+                    else if (response.StatusDescription == "Not Found")
+                    {
+                        string tokenLama = "";
+                        DataTable dt = new DataTable();
+                        modelSinkronisasi.getTokenPddikti(ref dt);
+                        if (dt.Rows.Count > 0)
+                        {
+                            tokenLama = dt.Rows[0]["token"].ToString();
+                            generateToken();
+                        }
+                    }
                     
 
                     //Console.WriteLine($"Response : {response.StatusCode}");
