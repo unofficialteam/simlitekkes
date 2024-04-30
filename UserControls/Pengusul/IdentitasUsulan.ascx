@@ -107,7 +107,7 @@
                         <asp:Panel ID="panelTopikUnggulanPT" runat="server" Visible="true">
 
                             <div class="form-group row">
-                                <label for="3" class="col-sm-2">Pilar Transformasi</label>
+                                <label for="3" class="col-sm-2">Pilar Transformasi/Bidang Prioritas</label>
                                 <div class="col-sm-10">
                                     <asp:DropDownList ID="ddlPilarTransformasi" runat="server" CssClass="form-control"
                                         DataTextField="nama_pilar_transformasi"
