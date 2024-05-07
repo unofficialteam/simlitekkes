@@ -23,6 +23,7 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
 
             if (!IsPostBack)
             {
+                isiDdlThnPelaksanaan();
                 if (ViewState["kdproghibah"] == null)
                 {
                     ViewState["kdproghibah"] = "1"; //desentralisasi
@@ -32,6 +33,17 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
 
                 isiRekap();
                 mvRekapUsulanBaru.SetActiveView(vDaftar);
+            }
+        }
+
+        private void isiDdlThnPelaksanaan()
+        {
+            ddlThn.Items.Clear();
+            ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem("--Pilih--", "0000"));
+            int thnSKg = int.Parse(DateTime.Now.Year.ToString());
+            for (int i = thnSKg; i >= 2021; i--)
+            {
+                ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem(i.ToString(), i.ToString()));
             }
         }
 
