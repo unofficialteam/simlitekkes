@@ -40,7 +40,7 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
         {
             ddlThn.Items.Clear();
             ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem("--Pilih--", "0000"));
-            int thnSKg = int.Parse(DateTime.Now.Year.ToString());
+            int thnSKg = int.Parse(DateTime.Now.Year.ToString()) + 1;
             for (int i = thnSKg; i >= 2021; i--)
             {
                 ddlThn.Items.Add(new System.Web.UI.WebControls.ListItem(i.ToString(), i.ToString()));
