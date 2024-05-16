@@ -27,7 +27,7 @@ namespace simlitekkes.UserControls.OperatorPenelitianPusdik
             {
                 isiStatusKepegaiawan(this.ddlEditStatusKepegawaian);
                 isiStatusKepegaiawan(this.ddlFilterStatusKepegawaian);
-                ddlFilterStatusKepegawaian.Items.Insert(0, new ListItem("-- Semua Status --", "-1"));
+                ddlFilterStatusKepegawaian.Items.Insert(0, new ListItem("-- Semua Status --", ""));
                 ddlFilterStatusKepegawaian.SelectedValue = "1";
                 isiGvDaftarData();
             }

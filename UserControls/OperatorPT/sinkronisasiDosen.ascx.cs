@@ -595,7 +595,8 @@ namespace simlitekkes.UserControls.OperatorPT
 
         private void getProdiByKode(string KodePT, string KodeProdi)
         {
-            const string BaseUrl = "https://api.kemdikbud.go.id:8243/pddikti/1.2/";
+            const string BaseUrl = "https://api.kemdikbud.go.id:8443/pddikti-api/1.2/";
+            //const string BaseUrl = "https://api.kemdikbud.go.id:8243/pddikti/1.2/"; lama
             string Token = "00000000-0000-0000-0000-000000000000";
             var dtToken = new DataTable();
             modelSinkronisasi.getTokenPddikti(ref dtToken);
