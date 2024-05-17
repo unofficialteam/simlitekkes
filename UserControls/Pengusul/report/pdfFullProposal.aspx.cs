@@ -70,7 +70,7 @@ namespace simlitekkes.UserControls.Pengusul.report
 
             if (dt.Rows[0]["kd_jenis_kegiatan"].ToString() == "2")
             {
-                lblJudulBlock.Text = "PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PPM) " + dt.Rows[0]["thn_pelaksanaan_kegiatan"].ToString();
+                lblJudulBlock.Text = "PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PKM) " + dt.Rows[0]["thn_pelaksanaan_kegiatan"].ToString();
             }
 
             lblJudul.Text = dt.Rows[0]["judul"].ToString();

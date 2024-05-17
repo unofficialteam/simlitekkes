@@ -39,7 +39,7 @@ namespace simlitekkes.UserControls.Pengusul.report
                 string thnUsulan = dt.Rows[0]["thn_usulan_kegiatan"].ToString();
                 //lblThnPelaksanaanPengabdian.Text = thnPelaksanaan.ToString();
 
-                lblJudulBlock.Text = "PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PPM) " + thnUsulan;
+                lblJudulBlock.Text = "PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PKM) " + thnUsulan;
 
                 if (thnPelaksanaan >= 2020)
                 {

@@ -80,7 +80,7 @@ table, td, th{
             </table>
         </div>
         <div style="text-align: center;">
-            <asp:Label runat="server" ID="lblJudulBlock" Text="PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PPM) 2019" Font-Bold="true"
+            <asp:Label runat="server" ID="lblJudulBlock" Text="PROPOSAL PENGABDIAN KEPADA MASYARAKAT (PKM) 2019" Font-Bold="true"
                 Style="display: inline; text-align: center; background-color: black; color: white; padding: 3px; font-size: 14px; font-family: Arial;"></asp:Label>
         </div>
         <table width="100%" cellpadding="-2" border="0" style="font-family: Arial; font-weight: normal; font-size: 11px; margin-top: 5px;">
