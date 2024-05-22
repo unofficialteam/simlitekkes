@@ -415,6 +415,19 @@ namespace simlitekkes.Models.PT
             return isSuccess;
         }
 
+        public bool cekJmlPlotting(ref DataTable dataTable, Guid idReviewer, string kdTahapanKegiatan, 
+            string thnUsulanKegiatan, string thnPelaksanaanKegiatan, string kdJenisKegiatan)
+        {
+            bool isSuccess = false;
+            string strSQL = string.Format(@"SELECT * FROM hibah.get_max_plotting_per_reviewer_tahapan('{0}','{1}','{2}','{3}','{4}');"
+                            , idReviewer, kdTahapanKegiatan, thnUsulanKegiatan, thnPelaksanaanKegiatan, kdJenisKegiatan);
+            dataTable = new DataTable();
+            isSuccess = this._db.FetchDataTable(strSQL, ref dataTable);
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+            return isSuccess;
+        }
+
         #endregion
     }
 }

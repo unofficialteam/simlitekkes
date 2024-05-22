@@ -434,31 +434,47 @@ namespace simlitekkes.UserControls.OperatorPT
                     {
                         if (dtcek.Rows[0]["status"].ToString() == "1")
                         {
-                            if (objModelPlottingReviewer.insertDataPlottingReviewer(ref dtinsert,
-                            Guid.Parse(ViewState["id_transaksi_kegiatan"].ToString()),
-                            Guid.Parse(id_reviewer), int.Parse(ViewState["no_urut"].ToString()),
-                            Guid.Parse(id_penugasan_reviewer.ToString())
-                            ))
+                            DataTable dtCekJmlPlotting = new DataTable();
+                            if (objModelPlottingReviewer.cekJmlPlotting(ref dtCekJmlPlotting, Guid.Parse(id_reviewer),
+                                ddlTahapan.SelectedValue, ddlThnUsulan.SelectedValue,
+                                ddlThnPelaksanaan.SelectedValue, ddlProgram.SelectedValue))
                             {
-                                if (dtinsert.Rows[0]["status"].ToString() == "1")
+                                if (dtCekJmlPlotting.Rows.Count > 0)
                                 {
-                                    mvDaftarPlotting.SetActiveView(viewDaftarPlotting);
-                                    setListDataPloting(ktPaging.currentPage * int.Parse(ddlJmlBaris.SelectedValue));
-                                }
-                                else
-                                {
-                                    noty.Notify(this.Page, uiNotify.NotifyType.error, "ERROR", dtinsert.Rows[0]["pesan"].ToString());
-                                }
-                            }
-                            else
-                            {
+                                    if (dtCekJmlPlotting.Rows[0]["kd_sts_memenuhi"].ToString() == "1")
+                                    {
+                                        if (objModelPlottingReviewer.insertDataPlottingReviewer(ref dtinsert,
+                        Guid.Parse(ViewState["id_transaksi_kegiatan"].ToString()),
+                        Guid.Parse(id_reviewer), int.Parse(ViewState["no_urut"].ToString()),
+                        Guid.Parse(id_penugasan_reviewer.ToString())
+                        ))
+                                        {
+                                            if (dtinsert.Rows[0]["status"].ToString() == "1")
+                                            {
+                                                mvDaftarPlotting.SetActiveView(viewDaftarPlotting);
+                                                setListDataPloting(ktPaging.currentPage * int.Parse(ddlJmlBaris.SelectedValue));
+                                            }
+                                            else
+                                            {
+                                                noty.Notify(this.Page, uiNotify.NotifyType.error, "ERROR", dtinsert.Rows[0]["pesan"].ToString());
+                                            }
+                                        }
+                                        else
+                                        {
 
+                                        }
+                                    }
+                                    else
+                                    {
+                                        noty.Notify(this.Page, uiNotify.NotifyType.error, "Perhatian", "Reviewer sudah diplotting sebanyak " + dtCekJmlPlotting.Rows[0]["jml_proposal_diplotting"].ToString() + ", Jumlah plotting maksimal 30 judul");
+                                    }
+                                }
                             }
                         }
-                        else
-                        {
-                            noty.Notify(this.Page, uiNotify.NotifyType.error, "ERROR", dtcek.Rows[0]["pesan"].ToString());
-                        }
+                    }
+                    else
+                    {
+                        noty.Notify(this.Page, uiNotify.NotifyType.error, "ERROR", dtcek.Rows[0]["pesan"].ToString());
                     }
                 }
             }
