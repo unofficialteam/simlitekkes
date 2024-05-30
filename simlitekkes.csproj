@@ -121,6 +121,7 @@
     </Reference>
     <Reference Include="Npgsql, Version=4.1.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>packages\Npgsql.4.1.4\lib\net461\Npgsql.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NPOI.Core, Version=2.6.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>packages\NPOI.2.6.1\lib\netstandard2.0\NPOI.Core.dll</HintPath>
@@ -3838,6 +3839,7 @@
     <Content Include="UserControls\OperatorPT\rekapUsulanLanjutan.ascx" />
     <Content Include="UserControls\OperatorPT\reviewerInternal.ascx" />
     <Content Include="UserControls\OperatorPT\sinkronisasiDosen.ascx" />
+    <Content Include="UserControls\OperatorPT\penelitianNonKemkes.ascx" />
     <Content Include="UserControls\OperatorPT\tendikNonDosen.ascx" />
     <Content Include="UserControls\OperatorPT\topikUnggulanPt.ascx" />
     <Content Include="UserControls\OperatorPT\unggahDokumenRenstra.ascx" />
@@ -4213,6 +4215,7 @@
     <Compile Include="Models\Pengusul\berandaPengusul.cs" />
     <Compile Include="Models\Pengusul\catatanHarian.cs" />
     <Compile Include="Models\Pengusul\daftarBidangUnggulanPT.cs" />
+    <Compile Include="Models\PT\penelitianNonKemkes.cs" />
     <Compile Include="Models\Pengusul\daftarTendikNonDosen.cs" />
     <Compile Include="Models\Pengusul\daftarTopikUnggulanPT.cs" />
     <Compile Include="Models\Pengusul\identitasUsulan.cs" />
@@ -4887,6 +4890,13 @@
     </Compile>
     <Compile Include="UserControls\OperatorPT\sinkronisasiDosen.ascx.designer.cs">
       <DependentUpon>sinkronisasiDosen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\penelitianNonKemkes.ascx.cs">
+      <DependentUpon>penelitianNonKemkes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\penelitianNonKemkes.ascx.designer.cs">
+      <DependentUpon>penelitianNonKemkes.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OperatorPT\tendikNonDosen.ascx.cs">
       <DependentUpon>tendikNonDosen.ascx</DependentUpon>

@@ -134,6 +134,11 @@
                     <i class="fas fa-list mr-2"></i>Topik Unggulan PT
                 </asp:linkbutton>
             </li>
+            <li>
+                <asp:linkbutton runat="server" id="lbPenelitianNonKemkes" onclick="lbPenelitianNonKemkes_Click">
+                    <i class="fas fa-list mr-2"></i>Penelitian Non Kemkes
+                </asp:linkbutton>
+            </li>
         </ul>
     </li>
     <li>

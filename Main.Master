@@ -161,7 +161,7 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <asp:LinkButton ID="lbKonfirmasi" runat="server" aria-expanded="false"
-                                                CssClass="nav-link dropdown-toggle" OnClick="lbKonfirmasi_Click" Visible="false">                                        
+                                                CssClass="nav-link dropdown-toggle" OnClick="lbKonfirmasi_Click" Visible="false">
                                         <i class="typcn typcn-user-add-outline"></i>
                                             </asp:LinkButton>
                                         </div>
@@ -255,7 +255,7 @@
 
                 <footer class="footer-content">
                     <div class="footer-text d-flex align-items-center justify-content-between">
-                        <div class="copy">© 2020 Tim TI Kementerian Kesehatan</div>
+                        <div class="copy">© 2020-<%= DateTime.Now.Year %> Tim TI Kementerian Kesehatan</div>
                         <div class="credit">SIMLITABKES</div>
                     </div>
                 </footer>

@@ -144,6 +144,10 @@ namespace simlitekkes.UserControls.OperatorPT
         {
             setLaman(47);
         }
+        protected void lbPenelitianNonKemkes_Click(object sender, EventArgs e)
+        {
+            setLaman(54);
+        }
         #endregion
 
         #region Luaran Tambahan

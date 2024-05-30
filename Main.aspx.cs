@@ -264,6 +264,9 @@ namespace simlitekkes
                         case "53":
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/formIdentitasTendikNonDosen.ascx"));
                             break;
+                        case "54":
+                            phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/penelitianNonKemkes.ascx"));
+                            break;
                     }
                     break;
 
@@ -407,7 +410,7 @@ namespace simlitekkes
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPenelitianPusdik/monitoringMonevEksternal.ascx"));
                             break;
 
-                        
+
                     }
                     break;
                 case 56:     // Operator DRPM Pengabdian
