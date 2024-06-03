@@ -302,7 +302,7 @@
                                 <div class="form-group">
                                     <label for="tbKomentar" class="col-sm-2 control-label">Komentar</label>
                                     <div class="col-sm-10">
-                                        <asp:TextBox ID="tbKomentar" runat="server" TextMode="MultiLine" class="form-control" Rows="3"></asp:TextBox>
+                                        <asp:TextBox ID="tbKomentar" runat="server" TextMode="MultiLine" placeholder="Pengisian komentar minimal 50 karakter" class="form-control" Rows="3"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
