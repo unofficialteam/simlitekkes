@@ -197,10 +197,11 @@ namespace simlitekkes.UserControls.Pengusul.mitraPengabdian
 
             else if (e.CommandName == "unduhDokumenMitraPelaksana")
             {
-                string namaMitra = gvKelMasyarakat.DataKeys[rowIndex]["NamaUMKM"].ToString();
-                string namaFile = (namaMitra.Length > 30) ? namaMitra.Substring(0, 30) : namaMitra;
-                namaFile = "MitraPelaksana_" + namaFile.Replace(" ", "_") + ".pdf";
-                namaFile = objManipData.removeUnicode(namaFile);
+                //string namaMitra = gvKelMasyarakat.DataKeys[rowIndex]["NamaUMKM"].ToString();
+                //string namaFile = (namaMitra.Length > 30) ? namaMitra.Substring(0, 30) : namaMitra;
+                //namaFile = "MitraPelaksana_" + namaFile.Replace(" ", "_") + ".pdf";
+                //namaFile = objManipData.removeUnicode(namaFile);
+                string namaFile = "mitraAbdimas Pelaksana.pdf";
 
                 string dirFile = "~/fileUpload/mitra/" + ViewState["thn_usulan_kegiatan"].ToString() + "/";
                 string filePath = string.Format(dirFile + "{0}.pdf", idMitra);

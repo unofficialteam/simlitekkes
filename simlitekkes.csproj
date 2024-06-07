@@ -6775,6 +6775,10 @@
     <Content Include="fileUpload\pengumuman\2021\3\7a1d86d4-4f93-4cea-9287-f6df1847bf6e.pdf" />
     <Content Include="fileUpload\realisasi_mitra\2021\d872ceec-8f82-45c7-ae19-83c172a9f975.pdf" />
     <Content Include="fileUpload\SK\88826407-b969-423d-ac33-720429810234.pdf" />
+    <Content Include="fileUpload\Mitra\2024\6c2e8dd6-2222-4ebb-b30e-586563cbac23.pdf" />
+    <Content Include="fileUpload\Mitra\2024\a2c758bc-3959-4ae1-b74b-946e6b9ead84.pdf" />
+    <Content Include="fileUpload\Mitra\2024\b4fecdf6-aee3-4016-b0ca-618e89cbf98e.pdf" />
+    <Content Include="fileUpload\Mitra\2024\bb8e9f4a-3820-487b-b567-9268981f93a9.pdf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
