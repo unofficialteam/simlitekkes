@@ -3816,6 +3816,7 @@
     <Content Include="UserControls\OperatorPT\daftarCalonReviewer.ascx" />
     <Content Include="UserControls\OperatorPT\formIdentitasTendikNonDosen.ascx" />
     <Content Include="UserControls\OperatorPT\hasilReview.ascx" />
+    <Content Include="UserControls\OperatorPT\hasilReviewAbdimas.ascx" />
     <Content Include="UserControls\OperatorPT\menu.ascx" />
     <Content Include="UserControls\OperatorPT\menuAbdimas.ascx" />
     <Content Include="UserControls\OperatorPT\monitoringLaporanAkhir.ascx" />
@@ -4215,6 +4216,7 @@
     <Compile Include="Models\Pengusul\berandaPengusul.cs" />
     <Compile Include="Models\Pengusul\catatanHarian.cs" />
     <Compile Include="Models\Pengusul\daftarBidangUnggulanPT.cs" />
+    <Compile Include="Models\PT\hasilReviewAbdimas.cs" />
     <Compile Include="Models\PT\penelitianNonKemkes.cs" />
     <Compile Include="Models\Pengusul\daftarTendikNonDosen.cs" />
     <Compile Include="Models\Pengusul\daftarTopikUnggulanPT.cs" />
@@ -4729,6 +4731,13 @@
     </Compile>
     <Compile Include="UserControls\OperatorPT\hasilReview.ascx.designer.cs">
       <DependentUpon>hasilReview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\hasilReviewAbdimas.ascx.cs">
+      <DependentUpon>hasilReviewAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\hasilReviewAbdimas.ascx.designer.cs">
+      <DependentUpon>hasilReviewAbdimas.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OperatorPT\menu.ascx.cs">
       <DependentUpon>menu.ascx</DependentUpon>

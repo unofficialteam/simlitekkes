@@ -114,6 +114,15 @@ namespace simlitekkes.UserControls.OperatorPT
 
         #endregion
 
+        #region Monitoring Abdimas
+
+        protected void lbHasilHasilReviewAbdimas_Click(object sender, EventArgs e)
+        {
+            setLaman(61);
+        }
+
+        #endregion
+
         #region Data Pendukung
 
         protected void lbProfilLembaga_Click(object sender, EventArgs e)

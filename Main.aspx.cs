@@ -239,6 +239,11 @@ namespace simlitekkes
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/monitoringPerbaikanUsulan.ascx"));
                             break;
 
+                        // Monitoring Abdimas
+                        case "61":
+                            phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/hasilReviewAbdimas.ascx"));
+                            break;
+
                         // Data Pendukung
                         case "41":
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/profilLembaga.ascx"));
