@@ -152,7 +152,7 @@ namespace simlitekkes.UserControls.Pengusul
             if (!cekFileExists(path2save))
             {
                 pnlKekDokumenUsulan.Visible = true;
-                enableKirimUsulan = true;
+                enableKirimUsulan = false;
             }
 
             if (retVal == 0)
