@@ -218,6 +218,9 @@ namespace simlitekkes
                         case "24":
                             phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/penetapanUsulanLanjutan.ascx"));
                             break;
+                        case "25":
+                            phContentForm.Controls.Add(LoadControl("~/UserControls/OperatorPT/penetapanUsulanBaruAbdimas.ascx"));
+                            break;
 
                         // Monitoring Kegiatan
                         case "31":

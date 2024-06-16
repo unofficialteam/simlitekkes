@@ -3827,6 +3827,7 @@
     <Content Include="UserControls\OperatorPT\pencarianAkunDosen.ascx" />
     <Content Include="UserControls\OperatorPT\penetapanUsulan.ascx" />
     <Content Include="UserControls\OperatorPT\penetapanUsulanBaru.ascx" />
+    <Content Include="UserControls\OperatorPT\penetapanUsulanBaruAbdimas.ascx" />
     <Content Include="UserControls\OperatorPT\penetapanUsulanLanjutan.ascx" />
     <Content Include="UserControls\OperatorPT\penugasanReviewerPT.ascx" />
     <Content Include="UserControls\OperatorPT\penugasanReviewerPTLanjutan.ascx" />
@@ -4250,6 +4251,7 @@
     <Compile Include="Models\PT\monitoringMonevEksternal.cs" />
     <Compile Include="Models\PT\monitoringPerbaikanUsulan.cs" />
     <Compile Include="Models\PT\OperatorPT.cs" />
+    <Compile Include="Models\PT\penetapanUsulanBaruAbdimas.cs" />
     <Compile Include="Models\PT\penetapanUsulanBaru.cs" />
     <Compile Include="Models\PT\penetapanUsulanLanjutan.cs" />
     <Compile Include="Models\PT\plottingReviewerPT.cs" />
@@ -4808,6 +4810,13 @@
     </Compile>
     <Compile Include="UserControls\OperatorPT\penetapanUsulanBaru.ascx.designer.cs">
       <DependentUpon>penetapanUsulanBaru.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\penetapanUsulanBaruAbdimas.ascx.cs">
+      <DependentUpon>penetapanUsulanBaruAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OperatorPT\penetapanUsulanBaruAbdimas.ascx.designer.cs">
+      <DependentUpon>penetapanUsulanBaruAbdimas.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\OperatorPT\penetapanUsulanLanjutan.ascx.cs">
       <DependentUpon>penetapanUsulanLanjutan.ascx</DependentUpon>

@@ -68,6 +68,11 @@ namespace simlitekkes.UserControls.OperatorPT
             setLaman(24);
         }
 
+        protected void lbPenetapanUsulanBaruAbdimas_Click(object sender, EventArgs e)
+        {
+            setLaman(25);
+        }
+
         #endregion
 
         #region Monitoring Kegiatan

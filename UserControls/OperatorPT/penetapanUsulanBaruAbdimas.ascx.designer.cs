@@ -11,214 +11,268 @@ namespace simlitekkes.UserControls.OperatorPT
 {
 
 
-    public partial class menu
+    public partial class penetapanUsulanBaruAbdimas
     {
 
         /// <summary>
-        /// lbBeranda control.
+        /// mvMain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbBeranda;
+        protected global::System.Web.UI.WebControls.MultiView mvMain;
 
         /// <summary>
-        /// lbRekapUsulanBaru control.
+        /// vRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbRekapUsulanBaru;
+        protected global::System.Web.UI.WebControls.View vRekapSkema;
 
         /// <summary>
-        /// lbRekapUsulanBaruAbdimas control.
+        /// rblProgramHibah control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbRekapUsulanBaruAbdimas;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblProgramHibah;
 
         /// <summary>
-        /// lbPenugasanReviewer control.
+        /// ddlTahapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPenugasanReviewer;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTahapan;
 
         /// <summary>
-        /// lbPlottingReviewer control.
+        /// ddlThnUsulan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPlottingReviewer;
+        protected global::System.Web.UI.WebControls.DropDownList ddlThnUsulan;
 
         /// <summary>
-        /// lbPenetapanTahapan control.
+        /// ddlThnPelaksanaan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPenetapanTahapan;
+        protected global::System.Web.UI.WebControls.DropDownList ddlThnPelaksanaan;
 
         /// <summary>
-        /// lbPenetapanUsulanLanjutan control.
+        /// lblTotalJmlUsulanRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPenetapanUsulanLanjutan;
+        protected global::System.Web.UI.WebControls.Label lblTotalJmlUsulanRekapSkema;
 
         /// <summary>
-        /// LinkButton1 control.
+        /// lblTotalJmlTdkLolosRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label lblTotalJmlTdkLolosRekapSkema;
 
         /// <summary>
-        /// lbMonitoringHasilReview control.
+        /// lblTotalJmlLolosRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbMonitoringHasilReview;
+        protected global::System.Web.UI.WebControls.Label lblTotalJmlLolosRekapSkema;
 
         /// <summary>
-        /// lbMonitoringLapKemajuan control.
+        /// lblTotalJmlBlmDitetapkanRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbMonitoringLapKemajuan;
+        protected global::System.Web.UI.WebControls.Label lblTotalJmlBlmDitetapkanRekapSkema;
 
         /// <summary>
-        /// lbMonitoringMonevEksternal control.
+        /// lblTotalJmlDanaRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbMonitoringMonevEksternal;
+        protected global::System.Web.UI.WebControls.Label lblTotalJmlDanaRekapSkema;
 
         /// <summary>
-        /// lbMonitoringLapAkhirTahun control.
+        /// gvRekapSkema control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbMonitoringLapAkhirTahun;
+        protected global::System.Web.UI.WebControls.GridView gvRekapSkema;
 
         /// <summary>
-        /// lbMonitoringPerbaikanProposal control.
+        /// vPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbMonitoringPerbaikanProposal;
+        protected global::System.Web.UI.WebControls.View vPenetapan;
 
         /// <summary>
-        /// lbHasilHasilReviewAbdimas control.
+        /// lblProgramHibahPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbHasilHasilReviewAbdimas;
+        protected global::System.Web.UI.WebControls.Label lblProgramHibahPenetapan;
 
         /// <summary>
-        /// lbProfilLembaga control.
+        /// lblNamaSkemaPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbProfilLembaga;
+        protected global::System.Web.UI.WebControls.Label lblNamaSkemaPenetapan;
 
         /// <summary>
-        /// lbSinkronisasi control.
+        /// lblTahapanPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbSinkronisasi;
+        protected global::System.Web.UI.WebControls.Label lblTahapanPenetapan;
 
         /// <summary>
-        /// lbKelolaTendikNonDosen control.
+        /// lblThnUsulanPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbKelolaTendikNonDosen;
+        protected global::System.Web.UI.WebControls.Label lblThnUsulanPenetapan;
 
         /// <summary>
-        /// lbPencarianAkunDosen control.
+        /// lblThnPelaksanaanPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPencarianAkunDosen;
+        protected global::System.Web.UI.WebControls.Label lblThnPelaksanaanPenetapan;
 
         /// <summary>
-        /// lbUnggahDokumenRenstra control.
+        /// lbKembaliPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUnggahDokumenRenstra;
+        protected global::System.Web.UI.WebControls.LinkButton lbKembaliPenetapan;
 
         /// <summary>
-        /// lbBidangUnngulanPT control.
+        /// rblStsPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbBidangUnngulanPT;
+        protected global::System.Web.UI.WebControls.RadioButtonList rblStsPenetapan;
 
         /// <summary>
-        /// lbTopikUnggulanPT control.
+        /// lblJmlJudulPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbTopikUnggulanPT;
+        protected global::System.Web.UI.WebControls.Label lblJmlJudulPenetapan;
 
         /// <summary>
-        /// lbPenelitianNonKemkes control.
+        /// tbPencarianPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPenelitianNonKemkes;
+        protected global::System.Web.UI.WebControls.TextBox tbPencarianPenetapan;
 
         /// <summary>
-        /// lbLogout control.
+        /// lbPencarianPenetapan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.LinkButton lbPencarianPenetapan;
+
+        /// <summary>
+        /// lbSimpanPermanen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbSimpanPermanen;
+
+        /// <summary>
+        /// lblSimpanPermanen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSimpanPermanen;
+
+        /// <summary>
+        /// ddlJmlBarisPenetapan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlJmlBarisPenetapan;
+
+        /// <summary>
+        /// lbExcelPenetapan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbExcelPenetapan;
+
+        /// <summary>
+        /// lvPenetapan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView lvPenetapan;
+
+        /// <summary>
+        /// pagingPenetapan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::simlitekkes.Helper.controlPaging pagingPenetapan;
     }
 }

@@ -45,12 +45,17 @@
             </li>--%>
             <li>
                 <asp:LinkButton runat="server" ID="lbPenetapanTahapan" OnClick="lbPenetapanTahapan_Click">
-                    <i class="fas fa-list mr-2"></i>Penetapan Usulan Baru
+                    <i class="fas fa-list mr-2"></i>Penetapan Usulan<br />Baru Penelitian
                 </asp:LinkButton>
             </li>
             <li>
                 <asp:LinkButton runat="server" ID="lbPenetapanUsulanLanjutan" OnClick="lbPenetapanUsulanLanjutan_Click">
-                    <i class="fas fa-list mr-2"></i>Penetapan Usulan Lanjutan
+                    <i class="fas fa-list mr-2"></i>Penetapan Usulan <br />Lanjutan Penelitian
+                </asp:LinkButton>
+            </li>
+            <li>
+                <asp:LinkButton runat="server" ID="LinkButton1" OnClick="lbPenetapanUsulanBaruAbdimas_Click">
+                    <i class="fas fa-list mr-2"></i>Penetapan Usulan<br />Baru Abdimas
                 </asp:LinkButton>
             </li>
             <%--            <li>
