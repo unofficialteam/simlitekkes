@@ -155,6 +155,9 @@ namespace simlitekkes
                         case "11":
                             phContentForm.Controls.Add(LoadControl("~/UserControls/Pengusul/usulanLanjutanPengabdian.ascx"));
                             break;
+                        case "12":
+                            phContentForm.Controls.Add(LoadControl("~/UserControls/Pengusul/perbaikanProposalAbdimas/perbaikanProposalAbdimas.ascx"));
+                            break;
 
                         //==============================================================================================
                         case "21":

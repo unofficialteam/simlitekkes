@@ -703,13 +703,13 @@ namespace simlitekkes.UserControls.OperatorPT
         private void isiGvBebanReviewer(int offset)
         {
             DataTable dt = new DataTable();
-            objModelPlottingReviewer.getListBebanReviewer(ref dt,
+            objModelPlottingReviewer.getListBebanReviewerOptPt(ref dt,
                 ddlThnUsulan.SelectedValue, ddlThnPelaksanaan.SelectedValue,
                 ddlTahapan.SelectedValue, objLogin.idInstitusi, "1", "10", "0", "");
             if (dt.Rows.Count > 0)
             {
                 int totalBaris = int.Parse(dt.Rows[0]["jml_total_data"].ToString());
-                ktPagingBebanRev.setPaging(10, totalBaris);
+                ktPagingBebanRev.setPaging(50, totalBaris);
             }
             else
             {

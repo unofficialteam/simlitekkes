@@ -3979,6 +3979,12 @@
     <Content Include="UserControls\Pengusul\pendanaan2021\targetLuaran2019.ascx" />
     <Content Include="UserControls\Pengusul\pendanaan2021\usulanBaru.ascx" />
     <Content Include="UserControls\Pengusul\pengembalianDana.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\dokumenUsulanAbdimas.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanProposalAbdimas.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanUsulanAbdimas.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\rabRevisiAbdimas.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapLuaranPerbaikanAbdimas.ascx" />
+    <Content Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapUsulanPerbaikanAbdimas.ascx" />
     <Content Include="UserControls\Pengusul\PerbaikanProposal\dokumenUsulan.ascx" />
     <Content Include="UserControls\Pengusul\PerbaikanProposal\perbaikanProposal.ascx" />
     <Content Include="UserControls\Pengusul\PerbaikanProposal\perbaikanUsulanPenelitian.ascx" />
@@ -4217,6 +4223,7 @@
     <Compile Include="Models\Pengusul\berandaPengusul.cs" />
     <Compile Include="Models\Pengusul\catatanHarian.cs" />
     <Compile Include="Models\Pengusul\daftarBidangUnggulanPT.cs" />
+    <Compile Include="Models\Pengusul\PerbaikanUsulanAbdimas.cs" />
     <Compile Include="Models\PT\hasilReviewAbdimas.cs" />
     <Compile Include="Models\PT\penelitianNonKemkes.cs" />
     <Compile Include="Models\Pengusul\daftarTendikNonDosen.cs" />
@@ -5874,6 +5881,48 @@
     </Compile>
     <Compile Include="UserControls\Pengusul\pengembalianDana.ascx.designer.cs">
       <DependentUpon>pengembalianDana.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\dokumenUsulanAbdimas.ascx.cs">
+      <DependentUpon>dokumenUsulanAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\dokumenUsulanAbdimas.ascx.designer.cs">
+      <DependentUpon>dokumenUsulanAbdimas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanProposalAbdimas.ascx.cs">
+      <DependentUpon>perbaikanProposalAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanProposalAbdimas.ascx.designer.cs">
+      <DependentUpon>perbaikanProposalAbdimas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanUsulanAbdimas.ascx.cs">
+      <DependentUpon>perbaikanUsulanAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\perbaikanUsulanAbdimas.ascx.designer.cs">
+      <DependentUpon>perbaikanUsulanAbdimas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rabRevisiAbdimas.ascx.cs">
+      <DependentUpon>rabRevisiAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rabRevisiAbdimas.ascx.designer.cs">
+      <DependentUpon>rabRevisiAbdimas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapLuaranPerbaikanAbdimas.ascx.cs">
+      <DependentUpon>rekapLuaranPerbaikanAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapLuaranPerbaikanAbdimas.ascx.designer.cs">
+      <DependentUpon>rekapLuaranPerbaikanAbdimas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapUsulanPerbaikanAbdimas.ascx.cs">
+      <DependentUpon>rekapUsulanPerbaikanAbdimas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Pengusul\perbaikanProposalAbdimas\rekapUsulanPerbaikanAbdimas.ascx.designer.cs">
+      <DependentUpon>rekapUsulanPerbaikanAbdimas.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Pengusul\PerbaikanProposal\dokumenUsulan.ascx.cs">
       <DependentUpon>dokumenUsulan.ascx</DependentUpon>

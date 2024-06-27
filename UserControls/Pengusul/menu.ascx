@@ -92,7 +92,13 @@
                         <i class="fa fa-chevron-right mr-2"></i>
                         <span>Usulan baru</span>
                 </asp:LinkButton>
-
+            </li>
+            <li>
+                <asp:LinkButton ID="lbPerbaikanUsulanAbdimas" runat="server" 
+                    OnClick="lbPerbaikanUsulanAbdimas_Click">
+                    <i class="fa fa-chevron-right mr-2"></i>
+                    <span>Perbaikan Usulan</span>
+                </asp:LinkButton>
             </li>
         </ul>
     </li>

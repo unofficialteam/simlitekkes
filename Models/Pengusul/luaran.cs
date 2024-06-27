@@ -740,6 +740,20 @@ namespace simlitekkes.Models.Pengusul
             return isSuccess;
         }
 
+        public bool rekapLuaranPerbaikanAbdimas(ref DataTable dataTable, Guid id_personal_ketua, string thnPelaksanaan)
+        {
+            bool isSuccess = false;
+            string strSQL = @"SELECT * FROM pengabdian.rekap_luaran_dijanjikan_perbaikan_abdimas(@p_id_personal, @p_thn_pelaksanaan_kegiatan);";
+            isSuccess = this._db.FetchDataTable(strSQL, ref dataTable
+            , new Npgsql.NpgsqlParameter("@p_id_personal", id_personal_ketua)
+            , new Npgsql.NpgsqlParameter("@p_thn_pelaksanaan_kegiatan", thnPelaksanaan)
+            );
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+
+            return isSuccess;
+        }
+
         public bool rekapLuaranPerbaikan(ref DataTable dataTable, Guid id_personal_ketua, string thnPelaksanaan)
         {
             bool isSuccess = false;

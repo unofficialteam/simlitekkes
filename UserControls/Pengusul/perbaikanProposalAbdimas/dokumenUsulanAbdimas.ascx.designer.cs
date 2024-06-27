@@ -7,110 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace simlitekkes.UserControls.Pengusul
+namespace simlitekkes.UserControls.Pengusul.perbaikanProposalAbdimas
 {
 
 
-    public partial class menu
+    public partial class dokumenUsulanAbdimas
     {
 
         /// <summary>
-        /// lbBeranda control.
+        /// lbUnduhTemplateDok2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbBeranda;
+        protected global::System.Web.UI.WebControls.LinkButton lbUnduhTemplateDok2;
 
         /// <summary>
-        /// lbUsulanBaru control.
+        /// lbUnduhTemplateDok control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUsulanBaru;
+        protected global::System.Web.UI.WebControls.LinkButton lbUnduhTemplateDok;
 
         /// <summary>
-        /// lbUsulanPendanaan2021 control.
+        /// lblTglUnggah control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUsulanPendanaan2021;
+        protected global::System.Web.UI.WebControls.Label lblTglUnggah;
 
         /// <summary>
-        /// lbPerbaikanUsulan control.
+        /// lblUkuranFile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPerbaikanUsulan;
+        protected global::System.Web.UI.WebControls.Label lblUkuranFile;
 
         /// <summary>
-        /// lbUsulanBaruPengabdian control.
+        /// fileUpload1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUsulanBaruPengabdian;
+        protected global::System.Web.UI.WebControls.FileUpload fileUpload1;
 
         /// <summary>
-        /// lbPerbaikanUsulanAbdimas control.
+        /// lbUnggahDokumen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbPerbaikanUsulanAbdimas;
+        protected global::System.Web.UI.WebControls.LinkButton lbUnggahDokumen;
 
         /// <summary>
-        /// lbCatatanHarian control.
+        /// lblInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbCatatanHarian;
+        protected global::System.Web.UI.WebControls.Label lblInfo;
 
         /// <summary>
-        /// lbLaporanKemajuan control.
+        /// lblErrorInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLaporanKemajuan;
-
-        /// <summary>
-        /// lbLaporanAkhir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLaporanAkhir;
-
-        /// <summary>
-        /// lbRiwayatUsulan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbRiwayatUsulan;
-
-        /// <summary>
-        /// lbLogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
+        protected global::System.Web.UI.WebControls.Label lblErrorInfo;
     }
 }

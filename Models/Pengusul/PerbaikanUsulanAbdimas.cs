@@ -6,7 +6,7 @@ using System.Data;
 
 namespace simlitekkes.Models.Pengusul
 {
-    public class PerbaikanUsulan : _abstractModels
+    public class PerbaikanUsulanAbdimas : _abstractModels
     {
         #region Variable Class
         
@@ -14,12 +14,12 @@ namespace simlitekkes.Models.Pengusul
 
         #region Konstruktor dan Destruktor
 
-        public PerbaikanUsulan()
+        public PerbaikanUsulanAbdimas()
         {
             setInitValues();
         }
 
-        ~PerbaikanUsulan()
+        ~PerbaikanUsulanAbdimas()
         {
 
         }
@@ -31,6 +31,20 @@ namespace simlitekkes.Models.Pengusul
         #endregion
 
         #region Methods
+
+        public bool listUsulanPerbaikanAbdimas(ref DataTable dataTable, Guid idpersonal, string thnPelaksanaan)
+        {
+            bool isSuccess = false;
+            string strSQL = @"SELECT * FROM pengabdian.list_perbaikan_usulan_abdimas(@idpersonal, @thnPelaksanaan);";
+            isSuccess = this._db.FetchDataTable(strSQL, ref this._currentRecords
+            , new Npgsql.NpgsqlParameter("@idpersonal", idpersonal)
+            , new Npgsql.NpgsqlParameter("@thnPelaksanaan", thnPelaksanaan)
+            );
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+
+            return isSuccess;
+        }
 
         public bool getListMakroRiset(ref DataTable dataTable)
         {
@@ -128,32 +142,6 @@ namespace simlitekkes.Models.Pengusul
             return isSuccess;
         }
 
-        public bool GetLuaranWajib2024(ref DataTable dataTable, Guid pIdUsulanKegiatan)
-        {
-            bool isSuccess = false;
-
-            string strSQL = string.Format("SELECT * FROM hibah.pdf_luaran_wajib_dan_target_capaian_no_8_perbaikan_2024('{0}');", pIdUsulanKegiatan.ToString());
-
-            dataTable = new DataTable();
-            isSuccess = this._db.FetchDataTable(strSQL, ref dataTable);
-            if (!isSuccess)
-                this._errorMessage = this._db.ErrorMessage;
-            return isSuccess;
-        }
-
-        public bool GetLuaranTambahan2024(ref DataTable dataTable, Guid pIdUsulanKegiatan)
-        {
-            bool isSuccess = false;
-
-            string strSQL = string.Format("SELECT * FROM hibah.pdf_luaran_tambahan_dan_target_capaian_no_8_perbaikan_2024('{0}');", pIdUsulanKegiatan.ToString());
-
-            dataTable = new DataTable();
-            isSuccess = this._db.FetchDataTable(strSQL, ref dataTable);
-            if (!isSuccess)
-                this._errorMessage = this._db.ErrorMessage;
-            return isSuccess;
-        }
-
         public bool GetLuaranTambahan(ref DataTable dataTable, Guid pIdUsulanKegiatan)
         {
             bool isSuccess = false;
@@ -183,13 +171,6 @@ namespace simlitekkes.Models.Pengusul
         {
             bool ada = false;
             string strSQL;
-
-            //strSQL = string.Format(@"SELECT * FROM referensi.whitelist_usulan_personal wup
-            //                            JOIN hibah.transaksi_kegiatan tk ON wup.id_usulan_kegiatan = tk.id_usulan_kegiatan
-            //                            JOIN referensi.tahapan_kegiatan_skema tks ON tk.id_tahapan_kegiatan_skema = tks.id_tahapan_kegiatan_skema
-            //                        WHERE wup.id_personal = '{0}' AND wup.id_skema = {1} AND tks.kd_tahapan_kegiatan = '{2}'
-            //                        AND wup.thn_usulan = '{3}' AND wup.thn_pelaksanaan = '{4}' AND wup.kd_sts_aktif = '1';",
-            //                        id_personal, id_skema, kd_tahapan_kegiatan, thn_usulan, thn_pelaksanaan);
 
             strSQL = string.Format(@"SELECT * FROM referensi.list_whitelist_usulan_personal({0}, '{1}', '{2}', '{3}', '{4}');",
                                     id_skema, thn_usulan, thn_pelaksanaan, kd_tahapan_kegiatan, id_personal);

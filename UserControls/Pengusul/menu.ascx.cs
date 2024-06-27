@@ -168,5 +168,11 @@ namespace simlitekkes.UserControls.Pengusul
             Response.Redirect("Main.aspx");
         }
 
+        protected void lbPerbaikanUsulanAbdimas_Click(object sender, EventArgs e)
+        {
+            CleanSession();
+            Session["page"] = 12;
+            Response.Redirect("Main.aspx");
+        }
     }
 }

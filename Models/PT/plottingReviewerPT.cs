@@ -242,6 +242,20 @@ namespace simlitekkes.Models.PT
             }
         }
 
+        public bool getListBebanReviewerOptPt(ref DataTable dataTable, string thnUsulan, string thnPelaksanaan,
+    string kdTahapanKegiatan, Guid idInstitusiYgMenugasi, string kdProgramHibah, string jmlData, string offset, string nama
+    )
+        {
+            bool isSuccess = false;
+            string strSQL = string.Format(@"SELECT * FROM hibah.list_beban_reviewer_opt_pt('{0}','{1}','{2}','{3}','{4}','{5}',{6},{7});"
+                            , thnUsulan, thnPelaksanaan, kdTahapanKegiatan, idInstitusiYgMenugasi, kdProgramHibah, nama, jmlData, offset);
+            dataTable = new DataTable();
+            isSuccess = this._db.FetchDataTable(strSQL, ref dataTable);
+            if (!isSuccess)
+                this._errorMessage = this._db.ErrorMessage;
+            return isSuccess;
+        }
+
         public bool getListBebanReviewer(ref DataTable dataTable, string thnUsulan, string thnPelaksanaan,
     string kdTahapanKegiatan, Guid idInstitusiYgMenugasi, string kdProgramHibah, string jmlData, string offset, string nama
     )
